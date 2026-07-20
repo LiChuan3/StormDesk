@@ -1,0 +1,33 @@
+methods: {'hybrid_static': 1319, 'agent_full_qwen14b': 1429, 'agent_full_qwen14b_t0': 1431}
+case-list restriction: {24: 1282, 48: 1102, 72: 907}
+
+=== lead 24 h (n=1282) ===
+               method    n  track_km  vmax_mae_kt  vmax_bias_kt  track_skill_pct  vmax_skill_pct
+        hybrid_static 1282      70.0         12.0           1.0              0.0             0.0
+agent_full_qwen14b_t0 1282      71.4         12.3          -1.8             -2.0            -2.3
+   agent_full_qwen14b 1282      71.5         12.5          -1.6             -2.1            -4.6
+
+=== lead 48 h (n=1102) ===
+               method    n  track_km  vmax_mae_kt  vmax_bias_kt  track_skill_pct  vmax_skill_pct
+        hybrid_static 1102     124.1         16.4           1.1              0.0             0.0
+agent_full_qwen14b_t0 1102     126.5         16.6          -0.3             -2.0            -1.2
+   agent_full_qwen14b 1102     127.4         16.8          -0.1             -2.7            -2.5
+
+=== lead 72 h (n=907) ===
+               method   n  track_km  vmax_mae_kt  vmax_bias_kt  track_skill_pct  vmax_skill_pct
+   agent_full_qwen14b 907     209.7         18.5           1.2              1.9            -3.6
+agent_full_qwen14b_t0 907     211.2         18.8           1.0              1.2            -5.1
+        hybrid_static 907     213.7         17.9           1.2              0.0             0.0
+
+=== RI (>= +30 kt / 24 h), deterministic dV ===
+               method  events  hits  misses  false_alarms   pod   far   csi
+        hybrid_static      88     0      88             1 0.000 1.000 0.000
+   agent_full_qwen14b      97     0      97            10 0.000 1.000 0.000
+agent_full_qwen14b_t0      97     1      96             5 0.010 0.833 0.010
+
+=== RI via explicit probability (p >= 0.5), agents ===
+               method  events  hits  misses  false_alarms   pod   far   csi
+   agent_full_qwen14b      97    65      32           295 0.670 0.819 0.166
+agent_full_qwen14b_t0      97    58      39           293 0.598 0.835 0.149
+
+wrote /data/yuxiaoning/projects/stormdesk_runtime/results/v7_t0_metrics.csv

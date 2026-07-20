@@ -1,0 +1,5 @@
+fitting the GBT gate on the calibration seasons ...
+  example 2018292N13269_2018102000 (EP): gate gain at 24h +1156.7 km, trust spread 1.60
+  example 2018186N10325_2018070900 (NA): gate gain at 24h +643.6 km, trust spread 1.50
+  example 2018351S09059_2018122100 (SI): gate gain at 24h -0.1 km, trust spread 0.07
+wrote 3 examples -> /data/yuxiaoning/projects/stormdesk_runtime/models/fewshot_track.json

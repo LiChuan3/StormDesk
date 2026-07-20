@@ -1,0 +1,24 @@
+common cases across 3 runs: 248
+               method  lead   n  track_km  vmax_mae_kt  vmax_bias_kt
+   agent_full_qwen14b    24 248     90.64        13.37         -2.66
+agent_full_qwen14b_r2    24 248     90.37        13.49         -1.84
+agent_full_qwen14b_r3    24 248     89.72        13.03         -2.83
+   agent_full_qwen14b    48 217    161.91        19.35         -2.96
+agent_full_qwen14b_r2    48 217    160.89        20.19         -1.71
+agent_full_qwen14b_r3    48 217    163.66        19.73         -2.02
+   agent_full_qwen14b    72 188    219.25        22.97         -1.77
+agent_full_qwen14b_r2    72 188    218.59        23.93         -0.38
+agent_full_qwen14b_r3    72 188    219.07        23.57         -0.91
+
+per-lead across-run range of mean metrics:
+  24h track 89.7-90.6 km (range 0.92); vmax 13.03-13.49 kt (range 0.46)
+  48h track 160.9-163.7 km (range 2.77); vmax 19.35-20.19 kt (range 0.84)
+  72h track 218.6-219.3 km (range 0.67); vmax 22.97-23.93 kt (range 0.96)
+
+per-case 24h spread across runs: track median 6.8 km (p90 29.5); vmax median 7.6 kt (p90 15.0); ri_prob median 0.10 (p90 0.47)
+
+RI on common subset:
+               method  events  hits  misses  false_alarms   pod   far   csi
+   agent_full_qwen14b      21    10      11            44 0.476 0.815 0.154
+agent_full_qwen14b_r2      21     8      13            41 0.381 0.837 0.129
+agent_full_qwen14b_r3      21    11      10            42 0.524 0.792 0.175

@@ -1,0 +1,397 @@
+/data_small/user_envs/yuxiaoning/llm-tc/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py:3045: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+methods: {'persistence': 1433, 'cliper': 1425, 'gru': 1425, 'transformer': 1425, 'cons_equal': 1431, 'cons_weighted': 1431, 'cons_bc': 1431, 'cons_aiwp': 1319, 'hybrid_static': 1319, 'hybrid_rules': 1319, 'static_convex': 1431, 'static_basin': 1431, 'static_icat': 1431, 'gate_ridge': 1431, 'gbt_static': 1431, 'gbt_case': 1431, 'gbt_shuffled': 1431, 'learned_gbt2': 1403, 'learned_gbt_contract': 1403, 'analog_median': 1318, 'analog_linear': 1318, 'aiwp_postproc': 1298, 'agent_full_qwen14b': 1429, 'agent_full_qwen72b': 1431, 'agent_full_qwen7b': 1428, 'agent_mini_qwen14b': 1430, 'agent_single_qwen14b': 1431, 'agent_single_refine_qwen14b': 1427, 'agent_no_analogs_qwen14b': 1431, 'agent_no_auditor_qwen14b': 1431, 'agent_no_diagnostics_qwen14b': 1427, 'agent_full_qwen14b_anon': 1430, 'agent_full_qwen14b_gateadv': 1431, 'pangu': 1319, 'fengwu': 1319}
+case-list restriction: {24: 1282, 48: 1102, 72: 907}
+
+=== lead 24 h (n=1282) ===
+                      method    n  track_km  vmax_mae_kt  vmax_bias_kt  track_skill_pct  vmax_skill_pct
+                    gbt_case 1282      64.4         12.0           1.0             67.6             8.5
+                learned_gbt2 1282      64.4         10.9           1.0             67.6            16.9
+        learned_gbt_contract 1282      65.5         11.2           0.8             67.1            14.9
+                static_basin 1282      65.9         12.0           1.0             66.9             8.5
+                gbt_shuffled 1282      68.1         12.0           1.0             65.8             8.5
+                  gate_ridge 1282      68.6         12.0           1.0             65.5             8.5
+  agent_full_qwen14b_gateadv 1282      68.9         12.3          -2.2             65.3             6.5
+               static_convex 1282      69.5         12.0           1.0             65.1             8.5
+                 static_icat 1282      69.6         12.0           1.0             65.0             8.5
+               analog_median 1282      70.0         12.3           2.1             64.8             6.4
+               aiwp_postproc 1282      70.0         10.5           0.3             64.8            19.6
+                   cons_aiwp 1282      70.0         26.3         -26.0             64.8          -100.3
+                hybrid_rules 1282      70.0         11.9           2.0             64.8             9.0
+               hybrid_static 1282      70.0         12.0           1.0             64.8             8.5
+               analog_linear 1282      70.0         12.2           0.7             64.8             7.0
+        agent_single_qwen14b 1282      70.5         11.9           1.0             64.6             9.6
+     agent_full_qwen14b_anon 1282      70.8         12.4          -2.4             64.4             5.8
+                      fengwu 1282      71.2         26.6         -26.3             64.2          -102.8
+    agent_no_analogs_qwen14b 1282      71.2         12.9          -1.1             64.2             1.3
+ agent_single_refine_qwen14b 1282      71.3         11.8           1.1             64.2            10.0
+          agent_full_qwen14b 1282      71.5         12.5          -1.6             64.1             4.4
+    agent_no_auditor_qwen14b 1282      71.6         12.0           2.7             64.0             8.8
+agent_no_diagnostics_qwen14b 1282      71.8         12.2          -0.5             63.9             7.1
+                  gbt_static 1282      72.6         12.0           1.0             63.5             8.5
+          agent_full_qwen72b 1282      73.6         12.8          -1.4             63.0             2.3
+           agent_full_qwen7b 1282      74.0         13.5          -2.6             62.8            -3.3
+               cons_weighted 1282      74.6         12.5          -4.7             62.5             4.3
+                     cons_bc 1282      74.6         12.0           1.0             62.5             8.5
+          agent_mini_qwen14b 1282      74.6         11.9          -1.8             62.5             9.0
+                       pangu 1282      81.0         26.0         -25.7             59.3           -98.1
+                  cons_equal 1282     105.2         15.6         -13.0             47.1           -18.7
+                         gru 1282     175.2         12.7          -0.0             11.9             2.9
+                 transformer 1282     177.5         12.5          -0.3             10.8             4.4
+                      cliper 1282     198.9         13.1           0.5              0.0             0.0
+                 persistence 1282     212.3         14.9           1.4             -6.7           -13.7
+
+=== lead 48 h (n=1102) ===
+                      method    n  track_km  vmax_mae_kt  vmax_bias_kt  track_skill_pct  vmax_skill_pct
+                    gbt_case 1102     116.0         16.4           1.1             73.5            15.4
+                learned_gbt2 1102     116.0         15.2           0.6             73.5            21.6
+                static_basin 1102     117.0         16.4           1.1             73.3            15.4
+        learned_gbt_contract 1102     117.6         15.6           0.5             73.1            19.7
+                gbt_shuffled 1102     120.4         16.4           1.1             72.5            15.4
+  agent_full_qwen14b_gateadv 1102     123.0         16.7          -0.8             71.9            14.1
+               static_convex 1102     123.5         16.4           1.1             71.8            15.4
+                hybrid_rules 1102     124.1         16.4           1.1             71.6            15.6
+               analog_median 1102     124.1         18.6           3.7             71.6             3.9
+               hybrid_static 1102     124.1         16.4           1.1             71.6            15.4
+               aiwp_postproc 1102     124.1         13.6           0.2             71.6            29.9
+               analog_linear 1102     124.1         18.1           1.5             71.6             6.8
+                   cons_aiwp 1102     124.1         27.0         -26.7             71.6           -39.4
+                 static_icat 1102     125.0         16.4           1.1             71.4            15.4
+                  gate_ridge 1102     125.9         16.4           1.1             71.2            15.4
+        agent_single_qwen14b 1102     126.0         16.7           2.6             71.2            14.1
+ agent_single_refine_qwen14b 1102     126.3         16.5           2.8             71.1            15.1
+    agent_no_auditor_qwen14b 1102     126.3         16.8           3.9             71.1            13.1
+    agent_no_analogs_qwen14b 1102     126.4         17.3           2.3             71.1            10.7
+agent_no_diagnostics_qwen14b 1102     126.4         16.8           0.8             71.1            13.4
+                  gbt_static 1102     127.3         16.4           1.1             70.9            15.4
+          agent_full_qwen14b 1102     127.4         16.8          -0.1             70.9            13.2
+                      fengwu 1102     127.4         28.2         -27.9             70.9           -45.3
+     agent_full_qwen14b_anon 1102     128.5         16.5          -0.9             70.6            14.9
+          agent_full_qwen72b 1102     130.8         16.4          -0.5             70.1            15.3
+           agent_full_qwen7b 1102     132.6         17.9          -1.4             69.7             7.7
+               cons_weighted 1102     133.6         17.5          -8.3             69.5             9.9
+                     cons_bc 1102     133.6         16.4           1.1             69.5            15.4
+          agent_mini_qwen14b 1102     133.6         16.4          -0.1             69.5            15.6
+                       pangu 1102     145.6         26.0         -25.4             66.7           -33.8
+                  cons_equal 1102     228.4         18.3         -13.1             47.8             5.6
+                         gru 1102     400.1         18.4           0.1              8.6             5.3
+                 transformer 1102     401.5         17.9           0.2              8.2             7.7
+                      cliper 1102     437.6         19.4           0.9              0.0             0.0
+                 persistence 1102     501.1         22.5           3.5            -14.5           -16.1
+
+=== lead 72 h (n=907) ===
+                      method   n  track_km  vmax_mae_kt  vmax_bias_kt  track_skill_pct  vmax_skill_pct
+                    gbt_case 907     175.7         17.9           1.2             73.6            19.6
+                learned_gbt2 907     175.7         17.1           1.0             73.6            23.0
+        learned_gbt_contract 907     179.5         17.8           1.2             73.0            20.0
+                gbt_shuffled 907     183.7         17.9           1.2             72.4            19.6
+                static_basin 907     197.5         17.9           1.2             70.3            19.6
+  agent_full_qwen14b_gateadv 907     204.1         18.4           0.7             69.3            17.1
+                  gate_ridge 907     207.0         17.9           1.2             68.9            19.6
+    agent_no_auditor_qwen14b 907     208.5         18.3           3.6             68.7            17.5
+               static_convex 907     209.1         17.9           1.2             68.6            19.6
+    agent_no_analogs_qwen14b 907     209.5         18.8           2.7             68.5            15.5
+          agent_full_qwen14b 907     209.7         18.5           1.2             68.5            16.7
+agent_no_diagnostics_qwen14b 907     210.7         18.8           1.6             68.4            15.6
+                 static_icat 907     210.8         17.9           1.2             68.3            19.6
+        agent_single_qwen14b 907     211.7         18.3           3.2             68.2            17.7
+     agent_full_qwen14b_anon 907     212.3         18.4           0.7             68.1            17.2
+ agent_single_refine_qwen14b 907     212.5         18.0           3.3             68.1            19.0
+               hybrid_static 907     213.7         17.9           1.2             67.9            19.6
+                hybrid_rules 907     213.7         17.9           1.2             67.9            19.6
+               analog_linear 907     213.7         20.6           2.1             67.9             7.2
+               analog_median 907     213.7         21.3           4.0             67.9             4.0
+               aiwp_postproc 907     213.7         14.8           0.9             67.9            33.4
+                   cons_aiwp 907     213.7         26.7         -26.2             67.9           -20.1
+          agent_full_qwen72b 907     215.1         17.5          -0.8             67.7            21.1
+                  gbt_static 907     216.0         17.9           1.2             67.6            19.6
+           agent_full_qwen7b 907     220.5         19.5          -0.5             66.9            12.1
+                       pangu 907     220.9         24.5         -23.6             66.8           -10.2
+               cons_weighted 907     221.9         19.0          -9.4             66.7            14.5
+                     cons_bc 907     221.9         17.9           1.2             66.7            19.6
+          agent_mini_qwen14b 907     221.9         18.5           2.0             66.7            16.7
+                      fengwu 907     253.6         29.1         -28.8             61.9           -30.9
+                  cons_equal 907     359.0         19.2         -12.7             46.1            13.5
+                 transformer 907     615.4         20.3           1.1              7.6             8.8
+                         gru 907     619.1         20.7           0.2              7.0             7.1
+                      cliper 907     665.8         22.2           1.1              0.0             0.0
+                 persistence 907     825.6         27.3           6.7            -24.0           -23.0
+
+=== RI (>= +30 kt / 24 h), deterministic dV ===
+                      method  events  hits  misses  false_alarms   pod   far   csi
+                 persistence      97     0      97             0 0.000   NaN 0.000
+                      cliper      97     0      97             1 0.000 1.000 0.000
+                         gru      97     0      97             0 0.000   NaN 0.000
+                 transformer      97     0      97             0 0.000   NaN 0.000
+                  cons_equal      97     0      97             0 0.000   NaN 0.000
+               cons_weighted      97     0      97             0 0.000   NaN 0.000
+                     cons_bc      97     0      97             1 0.000 1.000 0.000
+                   cons_aiwp      88     0      88             0 0.000   NaN 0.000
+               hybrid_static      88     0      88             1 0.000 1.000 0.000
+                hybrid_rules      88    11      77            22 0.125 0.667 0.100
+               static_convex      97     0      97             1 0.000 1.000 0.000
+                static_basin      97     0      97             1 0.000 1.000 0.000
+                 static_icat      97     0      97             1 0.000 1.000 0.000
+                  gate_ridge      97     0      97             1 0.000 1.000 0.000
+                  gbt_static      97     0      97             1 0.000 1.000 0.000
+                    gbt_case      97     0      97             1 0.000 1.000 0.000
+                gbt_shuffled      97     0      97             1 0.000 1.000 0.000
+                learned_gbt2      97    10      87            16 0.103 0.615 0.088
+        learned_gbt_contract      97    18      79            52 0.186 0.743 0.121
+               analog_median      88    10      78            16 0.114 0.615 0.096
+               analog_linear      88     3      85             5 0.034 0.625 0.032
+               aiwp_postproc      88     7      81            14 0.080 0.667 0.069
+          agent_full_qwen14b      97     0      97            10 0.000 1.000 0.000
+          agent_full_qwen72b      97     3      94            14 0.031 0.824 0.027
+           agent_full_qwen7b      97     2      95             5 0.021 0.714 0.020
+          agent_mini_qwen14b      97     1      96             3 0.010 0.750 0.010
+        agent_single_qwen14b      97     1      96             3 0.010 0.750 0.010
+ agent_single_refine_qwen14b      97     0      97             3 0.000 1.000 0.000
+    agent_no_analogs_qwen14b      97     1      96             1 0.010 0.500 0.010
+    agent_no_auditor_qwen14b      97     2      95             1 0.021 0.333 0.020
+agent_no_diagnostics_qwen14b      97     3      94            12 0.031 0.800 0.028
+     agent_full_qwen14b_anon      96     0      96             5 0.000 1.000 0.000
+  agent_full_qwen14b_gateadv      97     1      96             8 0.010 0.889 0.010
+                       pangu      88     0      88             0 0.000   NaN 0.000
+                      fengwu      88     0      88             0 0.000   NaN 0.000
+
+=== RI via explicit probability (p >= 0.5), agents ===
+                      method  events  hits  misses  false_alarms   pod   far   csi
+          agent_full_qwen14b      97    65      32           295 0.670 0.819 0.166
+          agent_full_qwen72b      97    56      41           214 0.577 0.793 0.180
+           agent_full_qwen7b      97    72      25           378 0.742 0.840 0.152
+          agent_mini_qwen14b      97    62      35           263 0.639 0.809 0.172
+        agent_single_qwen14b      97    42      55           169 0.433 0.801 0.158
+ agent_single_refine_qwen14b      97    62      35           299 0.639 0.828 0.157
+    agent_no_analogs_qwen14b      97    85      12           643 0.876 0.883 0.115
+    agent_no_auditor_qwen14b      97    67      30           299 0.691 0.817 0.169
+agent_no_diagnostics_qwen14b      97    68      29           357 0.701 0.840 0.150
+     agent_full_qwen14b_anon      96    56      40           245 0.583 0.814 0.164
+  agent_full_qwen14b_gateadv      97    62      35           302 0.639 0.830 0.155
+
+=== paired tests (serial-correlation-adjusted t; Holm per target) ===
+                     target                ref  lead metric    n  mean_diff      p  p_holm
+         agent_full_qwen14b      hybrid_static    24  track 1282     1.4601 0.3610  1.0000
+         agent_full_qwen14b      hybrid_static    24   vmax 1282     0.5495 0.0096  0.1059
+         agent_full_qwen14b      hybrid_static    48  track 1102     3.2907 0.0785  0.5493
+         agent_full_qwen14b      hybrid_static    48   vmax 1070     0.4102 0.1414  0.7069
+         agent_full_qwen14b      hybrid_static    72  track  907    -3.9770 0.4575  1.0000
+         agent_full_qwen14b      hybrid_static    72   vmax  859     0.6454 0.0413  0.3721
+         agent_full_qwen14b      static_convex    24  track 1282     2.0274 0.1006  0.6037
+         agent_full_qwen14b      static_convex    24   vmax 1282     0.5495 0.0096  0.1059
+         agent_full_qwen14b      static_convex    48  track 1102     3.8896 0.0061  0.0737
+         agent_full_qwen14b      static_convex    48   vmax 1070     0.4102 0.1414  0.7069
+         agent_full_qwen14b      static_convex    72  track  907     0.5912 0.9052  1.0000
+         agent_full_qwen14b      static_convex    72   vmax  859     0.6454 0.0413  0.3721
+         agent_full_qwen72b      hybrid_static    24  track 1282     3.5164 0.0524  0.4716
+         agent_full_qwen72b      hybrid_static    24   vmax 1282     0.8182 0.0011  0.0158
+         agent_full_qwen72b      hybrid_static    48  track 1102     6.7286 0.0040  0.0444
+         agent_full_qwen72b      hybrid_static    48   vmax 1070     0.0206 0.9507  1.0000
+         agent_full_qwen72b      hybrid_static    72  track  907     1.4460 0.8077  1.0000
+         agent_full_qwen72b      hybrid_static    72   vmax  859    -0.3402 0.2922  1.0000
+         agent_full_qwen72b      static_convex    24  track 1282     4.0837 0.0031  0.0372
+         agent_full_qwen72b      static_convex    24   vmax 1282     0.8182 0.0011  0.0158
+         agent_full_qwen72b      static_convex    48  track 1102     7.3275 0.0001  0.0015
+         agent_full_qwen72b      static_convex    48   vmax 1070     0.0206 0.9507  1.0000
+         agent_full_qwen72b      static_convex    72  track  907     6.0142 0.2126  1.0000
+         agent_full_qwen72b      static_convex    72   vmax  859    -0.3402 0.2922  1.0000
+         agent_full_qwen72b agent_full_qwen14b    24  track 1282     2.0563 0.0026  0.0344
+         agent_full_qwen72b agent_full_qwen14b    24   vmax 1282     0.2687 0.2579  1.0000
+         agent_full_qwen72b agent_full_qwen14b    48  track 1102     3.4379 0.0009  0.0146
+         agent_full_qwen72b agent_full_qwen14b    48   vmax 1070    -0.3896 0.1449  1.0000
+         agent_full_qwen72b agent_full_qwen14b    72  track  907     5.4230 0.0195  0.1952
+         agent_full_qwen72b agent_full_qwen14b    72   vmax  859    -0.9856 0.0007  0.0125
+         agent_mini_qwen14b      hybrid_static    24  track 1282     4.5710 0.0024  0.0260
+         agent_mini_qwen14b      hybrid_static    24   vmax 1282    -0.0605 0.7593  1.0000
+         agent_mini_qwen14b      hybrid_static    48  track 1102     9.5646 0.0000  0.0004
+         agent_mini_qwen14b      hybrid_static    48   vmax 1070    -0.0440 0.8704  1.0000
+         agent_mini_qwen14b      hybrid_static    72  track  907     8.2529 0.1286  0.7716
+         agent_mini_qwen14b      hybrid_static    72   vmax  859     0.6421 0.0348  0.3134
+         agent_mini_qwen14b      static_convex    24  track 1282     5.1382 0.0000  0.0000
+         agent_mini_qwen14b      static_convex    24   vmax 1282    -0.0605 0.7593  1.0000
+         agent_mini_qwen14b      static_convex    48  track 1102    10.1635 0.0000  0.0000
+         agent_mini_qwen14b      static_convex    48   vmax 1070    -0.0440 0.8704  1.0000
+         agent_mini_qwen14b      static_convex    72  track  907    12.8211 0.0096  0.0963
+         agent_mini_qwen14b      static_convex    72   vmax  859     0.6421 0.0348  0.3134
+         agent_mini_qwen14b agent_full_qwen14b    24  track 1282     3.1108 0.0000  0.0004
+         agent_mini_qwen14b agent_full_qwen14b    24   vmax 1282    -0.6100 0.0016  0.0198
+         agent_mini_qwen14b agent_full_qwen14b    48  track 1102     6.2739 0.0000  0.0000
+         agent_mini_qwen14b agent_full_qwen14b    48   vmax 1070    -0.4542 0.0626  0.4381
+         agent_mini_qwen14b agent_full_qwen14b    72  track  907    12.2299 0.0000  0.0000
+         agent_mini_qwen14b agent_full_qwen14b    72   vmax  859    -0.0033 0.9900  1.0000
+agent_single_refine_qwen14b      hybrid_static    24  track 1282     1.2092 0.2573  1.0000
+agent_single_refine_qwen14b      hybrid_static    24   vmax 1282    -0.1972 0.2171  1.0000
+agent_single_refine_qwen14b      hybrid_static    48  track 1102     2.1909 0.1082  1.0000
+agent_single_refine_qwen14b      hybrid_static    48   vmax 1070     0.0476 0.8854  1.0000
+agent_single_refine_qwen14b      hybrid_static    72  track  907    -1.2141 0.6921  1.0000
+agent_single_refine_qwen14b      hybrid_static    72   vmax  859     0.1378 0.7022  1.0000
+agent_single_refine_qwen14b      static_convex    24  track 1282     1.7764 0.0094  0.1501
+agent_single_refine_qwen14b      static_convex    24   vmax 1282    -0.1972 0.2171  1.0000
+agent_single_refine_qwen14b      static_convex    48  track 1102     2.7898 0.0028  0.0482
+agent_single_refine_qwen14b      static_convex    48   vmax 1070     0.0476 0.8854  1.0000
+agent_single_refine_qwen14b      static_convex    72  track  907     3.3541 0.5218  1.0000
+agent_single_refine_qwen14b      static_convex    72   vmax  859     0.1378 0.7022  1.0000
+agent_single_refine_qwen14b agent_full_qwen14b    24  track 1282    -0.2510 0.7299  1.0000
+agent_single_refine_qwen14b agent_full_qwen14b    24   vmax 1282    -0.7466 0.0002  0.0035
+agent_single_refine_qwen14b agent_full_qwen14b    48  track 1102    -1.0998 0.2748  1.0000
+agent_single_refine_qwen14b agent_full_qwen14b    48   vmax 1070    -0.3626 0.1607  1.0000
+agent_single_refine_qwen14b agent_full_qwen14b    72  track  907     2.7629 0.3308  1.0000
+agent_single_refine_qwen14b agent_full_qwen14b    72   vmax  859    -0.5076 0.0769  1.0000
+               learned_gbt2      hybrid_static    24  track 1282    -5.6605 0.0871  0.3521
+               learned_gbt2      hybrid_static    24   vmax 1282    -1.0917 0.0000  0.0000
+               learned_gbt2      hybrid_static    48  track 1102    -8.1143 0.0704  0.3521
+               learned_gbt2      hybrid_static    48   vmax 1070    -1.2105 0.0003  0.0036
+               learned_gbt2      hybrid_static    72  track  907   -37.9537 0.0084  0.0587
+               learned_gbt2      hybrid_static    72   vmax  859    -0.7625 0.1023  0.3521
+               learned_gbt2      static_convex    24  track 1282    -5.0932 0.0796  0.3521
+               learned_gbt2      static_convex    24   vmax 1282    -1.0917 0.0000  0.0000
+               learned_gbt2      static_convex    48  track 1102    -7.5154 0.0576  0.3458
+               learned_gbt2      static_convex    48   vmax 1070    -1.2105 0.0003  0.0036
+               learned_gbt2      static_convex    72  track  907   -33.3855 0.0029  0.0230
+               learned_gbt2      static_convex    72   vmax  859    -0.7625 0.1023  0.3521
+               learned_gbt2 agent_full_qwen14b    24  track 1282    -7.1206 0.0001  0.0013
+               learned_gbt2 agent_full_qwen14b    24   vmax 1282    -1.6411 0.0000  0.0000
+               learned_gbt2 agent_full_qwen14b    48  track 1102   -11.4050 0.0002  0.0025
+               learned_gbt2 agent_full_qwen14b    48   vmax 1070    -1.6207 0.0000  0.0000
+               learned_gbt2 agent_full_qwen14b    72  track  907   -33.9767 0.0003  0.0033
+               learned_gbt2 agent_full_qwen14b    72   vmax  859    -1.4079 0.0005  0.0041
+       learned_gbt_contract      hybrid_static    24  track 1282    -4.5350 0.1320  0.9164
+       learned_gbt_contract      hybrid_static    24   vmax 1282    -0.8336 0.0095  0.1138
+       learned_gbt_contract      hybrid_static    48  track 1102    -6.4653 0.1146  0.9164
+       learned_gbt_contract      hybrid_static    48   vmax 1070    -0.8332 0.1173  0.9164
+       learned_gbt_contract      hybrid_static    72  track  907   -34.1308 0.0132  0.1321
+       learned_gbt_contract      hybrid_static    72   vmax  859    -0.0873 0.9082  1.0000
+       learned_gbt_contract      static_convex    24  track 1282    -3.9677 0.1281  0.9164
+       learned_gbt_contract      static_convex    24   vmax 1282    -0.8336 0.0095  0.1138
+       learned_gbt_contract      static_convex    48  track 1102    -5.8664 0.0999  0.8992
+       learned_gbt_contract      static_convex    48   vmax 1070    -0.8332 0.1173  0.9164
+       learned_gbt_contract      static_convex    72  track  907   -29.5626 0.0045  0.0586
+       learned_gbt_contract      static_convex    72   vmax  859    -0.0873 0.9082  1.0000
+       learned_gbt_contract agent_full_qwen14b    24  track 1282    -5.9951 0.0001  0.0014
+       learned_gbt_contract agent_full_qwen14b    24   vmax 1282    -1.3831 0.0000  0.0001
+       learned_gbt_contract agent_full_qwen14b    48  track 1102    -9.7560 0.0002  0.0035
+       learned_gbt_contract agent_full_qwen14b    48   vmax 1070    -1.2434 0.0039  0.0544
+       learned_gbt_contract agent_full_qwen14b    72  track  907   -30.1538 0.0004  0.0067
+       learned_gbt_contract agent_full_qwen14b    72   vmax  859    -0.7327 0.2368  0.9164
+              static_convex      hybrid_static    24  track 1282    -0.5673 0.2326  1.0000
+              static_convex      hybrid_static    24   vmax 1282     0.0000    NaN  1.0000
+              static_convex      hybrid_static    48  track 1102    -0.5989 0.3993  1.0000
+              static_convex      hybrid_static    48   vmax 1070     0.0000    NaN  1.0000
+              static_convex      hybrid_static    72  track  907    -4.5682 0.5162  1.0000
+              static_convex      hybrid_static    72   vmax  859     0.0000    NaN  1.0000
+              static_convex agent_full_qwen14b    24  track 1282    -2.0274 0.1006  0.9055
+              static_convex agent_full_qwen14b    24   vmax 1282    -0.5495 0.0096  0.1059
+              static_convex agent_full_qwen14b    48  track 1102    -3.8896 0.0061  0.0737
+              static_convex agent_full_qwen14b    48   vmax 1070    -0.4102 0.1414  1.0000
+              static_convex agent_full_qwen14b    72  track  907    -0.5912 0.9052  1.0000
+              static_convex agent_full_qwen14b    72   vmax  859    -0.6454 0.0413  0.4135
+               static_basin      hybrid_static    24  track 1282    -4.1825 0.1033  1.0000
+               static_basin      hybrid_static    24   vmax 1282     0.0000    NaN  1.0000
+               static_basin      hybrid_static    48  track 1102    -7.1181 0.0997  1.0000
+               static_basin      hybrid_static    48   vmax 1070     0.0000    NaN  1.0000
+               static_basin      hybrid_static    72  track  907   -16.1475 0.0866  1.0000
+               static_basin      hybrid_static    72   vmax  859     0.0000    NaN  1.0000
+               static_basin      static_convex    24  track 1282    -3.6152 0.1577  1.0000
+               static_basin      static_convex    24   vmax 1282     0.0000    NaN  1.0000
+               static_basin      static_convex    48  track 1102    -6.5192 0.1086  1.0000
+               static_basin      static_convex    48   vmax 1070     0.0000    NaN  1.0000
+               static_basin      static_convex    72  track  907   -11.5793 0.0687  0.8930
+               static_basin      static_convex    72   vmax  859     0.0000    NaN  1.0000
+               static_basin agent_full_qwen14b    24  track 1282    -5.6426 0.0444  0.6662
+               static_basin agent_full_qwen14b    24   vmax 1282    -0.5495 0.0096  0.1734
+               static_basin agent_full_qwen14b    48  track 1102   -10.4088 0.0100  0.1734
+               static_basin agent_full_qwen14b    48   vmax 1070    -0.4102 0.1414  1.0000
+               static_basin agent_full_qwen14b    72  track  907   -12.1705 0.0600  0.8406
+               static_basin agent_full_qwen14b    72   vmax  859    -0.6454 0.0413  0.6616
+                static_icat      hybrid_static    24  track 1282    -0.4438 0.4715  1.0000
+                static_icat      hybrid_static    24   vmax 1282     0.0000    NaN  1.0000
+                static_icat      hybrid_static    48  track 1102     0.9485 0.3262  1.0000
+                static_icat      hybrid_static    48   vmax 1070     0.0000    NaN  1.0000
+                static_icat      hybrid_static    72  track  907    -2.9272 0.6931  1.0000
+                static_icat      hybrid_static    72   vmax  859     0.0000    NaN  1.0000
+                static_icat      static_convex    24  track 1282     0.1235 0.6626  1.0000
+                static_icat      static_convex    24   vmax 1282     0.0000    NaN  1.0000
+                static_icat      static_convex    48  track 1102     1.5474 0.0366  0.6223
+                static_icat      static_convex    48   vmax 1070     0.0000    NaN  1.0000
+                static_icat      static_convex    72  track  907     1.6410 0.6028  1.0000
+                static_icat      static_convex    72   vmax  859     0.0000    NaN  1.0000
+                static_icat agent_full_qwen14b    24  track 1282    -1.9040 0.1024  1.0000
+                static_icat agent_full_qwen14b    24   vmax 1282    -0.5495 0.0096  0.1734
+                static_icat agent_full_qwen14b    48  track 1102    -2.3422 0.1072  1.0000
+                static_icat agent_full_qwen14b    48   vmax 1070    -0.4102 0.1414  1.0000
+                static_icat agent_full_qwen14b    72  track  907     1.0498 0.8614  1.0000
+                static_icat agent_full_qwen14b    72   vmax  859    -0.6454 0.0413  0.6616
+                 gate_ridge      hybrid_static    24  track 1282    -1.4211 0.6999  1.0000
+                 gate_ridge      hybrid_static    24   vmax 1282     0.0000    NaN  1.0000
+                 gate_ridge      hybrid_static    48  track 1102     1.7925 0.5262  1.0000
+                 gate_ridge      hybrid_static    48   vmax 1070     0.0000    NaN  1.0000
+                 gate_ridge      hybrid_static    72  track  907    -6.6666 0.2411  1.0000
+                 gate_ridge      hybrid_static    72   vmax  859     0.0000    NaN  1.0000
+                 gate_ridge      static_convex    24  track 1282    -0.8539 0.7940  1.0000
+                 gate_ridge      static_convex    24   vmax 1282     0.0000    NaN  1.0000
+                 gate_ridge      static_convex    48  track 1102     2.3914 0.2955  1.0000
+                 gate_ridge      static_convex    48   vmax 1070     0.0000    NaN  1.0000
+                 gate_ridge      static_convex    72  track  907    -2.0985 0.7485  1.0000
+                 gate_ridge      static_convex    72   vmax  859     0.0000    NaN  1.0000
+                 gate_ridge agent_full_qwen14b    24  track 1282    -2.8813 0.1670  1.0000
+                 gate_ridge agent_full_qwen14b    24   vmax 1282    -0.5495 0.0096  0.1734
+                 gate_ridge agent_full_qwen14b    48  track 1102    -1.4982 0.4316  1.0000
+                 gate_ridge agent_full_qwen14b    48   vmax 1070    -0.4102 0.1414  1.0000
+                 gate_ridge agent_full_qwen14b    72  track  907    -2.6896 0.3379  1.0000
+                 gate_ridge agent_full_qwen14b    72   vmax  859    -0.6454 0.0413  0.7029
+                   gbt_case      hybrid_static    24  track 1282    -5.6605 0.0871  0.7167
+                   gbt_case      hybrid_static    24   vmax 1282     0.0000    NaN  1.0000
+                   gbt_case      hybrid_static    48  track 1102    -8.1143 0.0704  0.7043
+                   gbt_case      hybrid_static    48   vmax 1070     0.0000    NaN  1.0000
+                   gbt_case      hybrid_static    72  track  907   -37.9537 0.0084  0.1174
+                   gbt_case      hybrid_static    72   vmax  859     0.0000    NaN  1.0000
+                   gbt_case      static_convex    24  track 1282    -5.0932 0.0796  0.7167
+                   gbt_case      static_convex    24   vmax 1282     0.0000    NaN  1.0000
+                   gbt_case      static_convex    48  track 1102    -7.5154 0.0576  0.6339
+                   gbt_case      static_convex    48   vmax 1070     0.0000    NaN  1.0000
+                   gbt_case      static_convex    72  track  907   -33.3855 0.0029  0.0432
+                   gbt_case      static_convex    72   vmax  859     0.0000    NaN  1.0000
+                   gbt_case agent_full_qwen14b    24  track 1282    -7.1206 0.0001  0.0017
+                   gbt_case agent_full_qwen14b    24   vmax 1282    -0.5495 0.0096  0.1252
+                   gbt_case agent_full_qwen14b    48  track 1102   -11.4050 0.0002  0.0033
+                   gbt_case agent_full_qwen14b    48   vmax 1070    -0.4102 0.1414  0.9896
+                   gbt_case agent_full_qwen14b    72  track  907   -33.9767 0.0003  0.0044
+                   gbt_case agent_full_qwen14b    72   vmax  859    -0.6454 0.0413  0.4962
+              aiwp_postproc      hybrid_static    24  track 1282     0.0000    NaN  1.0000
+              aiwp_postproc      hybrid_static    24   vmax 1282    -1.4458 0.0000  0.0000
+              aiwp_postproc      hybrid_static    48  track 1102     0.0000    NaN  1.0000
+              aiwp_postproc      hybrid_static    48   vmax 1070    -2.8121 0.0000  0.0000
+              aiwp_postproc      hybrid_static    72  track  907     0.0000    NaN  1.0000
+              aiwp_postproc      hybrid_static    72   vmax  859    -3.0742 0.0000  0.0004
+              aiwp_postproc      static_convex    24  track 1282     0.5673 0.2326  1.0000
+              aiwp_postproc      static_convex    24   vmax 1282    -1.4458 0.0000  0.0000
+              aiwp_postproc      static_convex    48  track 1102     0.5989 0.3993  1.0000
+              aiwp_postproc      static_convex    48   vmax 1070    -2.8121 0.0000  0.0000
+              aiwp_postproc      static_convex    72  track  907     4.5682 0.5162  1.0000
+              aiwp_postproc      static_convex    72   vmax  859    -3.0742 0.0000  0.0004
+              aiwp_postproc agent_full_qwen14b    24  track 1282    -1.4601 0.3610  1.0000
+              aiwp_postproc agent_full_qwen14b    24   vmax 1282    -1.9952 0.0000  0.0000
+              aiwp_postproc agent_full_qwen14b    48  track 1102    -3.2907 0.0785  0.7062
+              aiwp_postproc agent_full_qwen14b    48   vmax 1070    -3.2223 0.0000  0.0000
+              aiwp_postproc agent_full_qwen14b    72  track  907     3.9770 0.4575  1.0000
+              aiwp_postproc agent_full_qwen14b    72   vmax  859    -3.7196 0.0000  0.0000
+ agent_full_qwen14b_gateadv      hybrid_static    24  track 1282    -1.1107 0.5343  1.0000
+ agent_full_qwen14b_gateadv      hybrid_static    24   vmax 1282     0.2632 0.2089  1.0000
+ agent_full_qwen14b_gateadv      hybrid_static    48  track 1102    -1.1066 0.5817  1.0000
+ agent_full_qwen14b_gateadv      hybrid_static    48   vmax 1070     0.2488 0.3904  1.0000
+ agent_full_qwen14b_gateadv      hybrid_static    72  track  907    -9.5778 0.1284  1.0000
+ agent_full_qwen14b_gateadv      hybrid_static    72   vmax  859     0.5410 0.0525  0.7875
+ agent_full_qwen14b_gateadv      static_convex    24  track 1282    -0.5434 0.6971  1.0000
+ agent_full_qwen14b_gateadv      static_convex    24   vmax 1282     0.2632 0.2089  1.0000
+ agent_full_qwen14b_gateadv      static_convex    48  track 1102    -0.5077 0.7430  1.0000
+ agent_full_qwen14b_gateadv      static_convex    48   vmax 1070     0.2488 0.3904  1.0000
+ agent_full_qwen14b_gateadv      static_convex    72  track  907    -5.0096 0.3338  1.0000
+ agent_full_qwen14b_gateadv      static_convex    72   vmax  859     0.5410 0.0525  0.7875
+ agent_full_qwen14b_gateadv agent_full_qwen14b    24  track 1282    -2.5708 0.0001  0.0010
+ agent_full_qwen14b_gateadv agent_full_qwen14b    24   vmax 1282    -0.2863 0.1699  1.0000
+ agent_full_qwen14b_gateadv agent_full_qwen14b    48  track 1102    -4.3973 0.0001  0.0010
+ agent_full_qwen14b_gateadv agent_full_qwen14b    48   vmax 1070    -0.1614 0.5350  1.0000
+ agent_full_qwen14b_gateadv agent_full_qwen14b    72  track  907    -5.6008 0.0408  0.6525
+ agent_full_qwen14b_gateadv agent_full_qwen14b    72   vmax  859    -0.1044 0.6931  1.0000
+
+wrote /data/yuxiaoning/projects/stormdesk_runtime/results/v7_metrics.csv

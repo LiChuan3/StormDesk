@@ -1,0 +1,9 @@
+calib run: 1378 cycles
+Traceback (most recent call last):
+  File "/data/yuxiaoning/projects/stormdesk/scripts/32_llama_recal.py", line 159, in <module>
+    main()
+  File "/data/yuxiaoning/projects/stormdesk/scripts/32_llama_recal.py", line 110, in main
+    pc, yc = ri_arrays(ccd, calib_run)
+  File "/data/yuxiaoning/projects/stormdesk/scripts/32_llama_recal.py", line 76, in ri_arrays
+    p = float(d["ri24_prob"])
+TypeError: float() argument must be a string or a real number, not 'dict'

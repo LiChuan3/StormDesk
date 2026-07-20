@@ -1,0 +1,12 @@
+building calib track table ...
+calib member-rows: 21298
+building test track table ...
+lead 24: fit on 8139 rows
+lead 48: fit on 7142 rows
+lead 72: fit on 6017 rows
+building intensity matrices ...
+intensity lead 24: fit on 1343 rows
+intensity lead 48: fit on 1151 rows
+intensity lead 72: fit on 940 rows
+learned_gbt: 1431 forecasts -> /data/yuxiaoning/projects/stormdesk_runtime/forecasts/test_learned_gbt.jsonl
+learned_gbt_bounded: 1431 forecasts -> /data/yuxiaoning/projects/stormdesk_runtime/forecasts/test_learned_gbt_bounded.jsonl

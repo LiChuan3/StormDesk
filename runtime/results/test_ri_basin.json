@@ -1,0 +1,92 @@
+{
+ "EP": {
+  "n": 274,
+  "office": {
+   "events": 22,
+   "pod": 0.818,
+   "far": 0.793,
+   "csi": 0.198
+  },
+  "logistic": {
+   "events": 22,
+   "pod": 0.591,
+   "far": 0.639,
+   "csi": 0.289
+  }
+ },
+ "NA": {
+  "n": 333,
+  "office": {
+   "events": 11,
+   "pod": 0.909,
+   "far": 0.821,
+   "csi": 0.175
+  },
+  "logistic": {
+   "events": 11,
+   "pod": 0.455,
+   "far": 0.865,
+   "csi": 0.116
+  }
+ },
+ "NI": {
+  "n": 44,
+  "office": {
+   "events": 3,
+   "pod": 1.0,
+   "far": 0.75,
+   "csi": 0.25
+  },
+  "logistic": {
+   "events": 3,
+   "pod": 0.333,
+   "far": 0.667,
+   "csi": 0.2
+  }
+ },
+ "SI": {
+  "n": 298,
+  "office": {
+   "events": 21,
+   "pod": 0.429,
+   "far": 0.871,
+   "csi": 0.11
+  },
+  "logistic": {
+   "events": 21,
+   "pod": 0.381,
+   "far": 0.826,
+   "csi": 0.136
+  }
+ },
+ "SP": {
+  "n": 110,
+  "office": {
+   "events": 7,
+   "pod": 0.714,
+   "far": 0.792,
+   "csi": 0.192
+  },
+  "logistic": {
+   "events": 7,
+   "pod": 0.714,
+   "far": 0.737,
+   "csi": 0.238
+  }
+ },
+ "WP": {
+  "n": 342,
+  "office": {
+   "events": 33,
+   "pod": 0.606,
+   "far": 0.818,
+   "csi": 0.163
+  },
+  "logistic": {
+   "events": 33,
+   "pod": 0.636,
+   "far": 0.72,
+   "csi": 0.241
+  }
+ }
+}

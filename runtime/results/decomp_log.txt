@@ -1,0 +1,51 @@
+fitting static convex weights ...
+  weights: {24: {'pangu': 0.44, 'fengwu': 0.48, 'gru': 0.08, 'transformer': 0.0, 'cliper': 0.0}, 48: {'pangu': 0.44, 'fengwu': 0.52, 'gru': 0.04, 'transformer': 0.0, 'cliper': 0.01}, 72: {'pangu': 0.7, 'fengwu': 0.26, 'gru': 0.04, 'transformer': 0.0, 'cliper': 0.0}}
+static_convex: 1431 -> /data/yuxiaoning/projects/stormdesk_runtime/forecasts/test_static_convex.jsonl
+fitting GBT track gates ...
+gbt_case: 1431 -> /data/yuxiaoning/projects/stormdesk_runtime/forecasts/test_gbt_case.jsonl
+gbt_static: 1431 -> /data/yuxiaoning/projects/stormdesk_runtime/forecasts/test_gbt_static.jsonl
+gbt_shuffled: 1431 -> /data/yuxiaoning/projects/stormdesk_runtime/forecasts/test_gbt_shuffled.jsonl
+gbt_case_withaiwp: 1431 -> /data/yuxiaoning/projects/stormdesk_runtime/forecasts/test_gbt_case_withaiwp.jsonl
+
+TRACK km: {
+ "static_convex": {
+  "24": 71.54047283788564,
+  "48": 126.85795030501993,
+  "72": 211.3753984517252
+ },
+ "gbt_static": {
+  "24": 74.55961982040598,
+  "48": 130.95024615739968,
+  "72": 220.11495187711333
+ },
+ "gbt_case": {
+  "24": 66.07162163853944,
+  "48": 119.66107792119047,
+  "72": 182.3196702884534
+ },
+ "gbt_shuffled": {
+  "24": 69.81238472373204,
+  "48": 125.03962770419577,
+  "72": 191.44704977980894
+ },
+ "gbt_case_withaiwp": {
+  "24": 65.19835822606072,
+  "48": 119.16239578777376,
+  "72": 195.0042455579352
+ },
+ "hybrid_static": {
+  "24": 72.15907945155352,
+  "48": 127.20691541727425,
+  "72": 216.69901646574846
+ }
+}
+static->case: {'24': 5.47, '48': 7.2, '72': 29.06}
+gbt_static->case: {'24': 8.49, '48': 11.29, '72': 37.8}
+
+fitting intensity residual GBT ...
+  GBT intensity shrinkage (a,b): {'24': (1.5431279705455696, -0.043442689634138304), '48': (1.6407360648649183, 0.23968397727649032), '72': (1.7531331300961097, 0.31190484893943565)}
+learned_gbt2: 1403 -> /data/yuxiaoning/projects/stormdesk_runtime/forecasts/test_learned_gbt2.jsonl
+learned_gbt_contract: 1403 -> /data/yuxiaoning/projects/stormdesk_runtime/forecasts/test_learned_gbt_contract.jsonl
+  fraction of GBT intensity residuals exceeding +-25 kt: {'24': 0.009, '48': 0.015, '72': 0.012}
+
+wrote decomp summary

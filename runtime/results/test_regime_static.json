@@ -1,0 +1,15 @@
+{
+ "basin_groups_fit": [
+  "EP",
+  "NA",
+  "NI",
+  "SI",
+  "SP",
+  "WP"
+ ],
+ "icat_groups_fit": [
+  "cat12",
+  "cat3plus",
+  "td_ts"
+ ]
+}

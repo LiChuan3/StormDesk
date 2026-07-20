@@ -1,0 +1,40 @@
+shrink_na: {24: (0.501, -0.951), 48: (0.504, 1.142), 72: (0.439, 2.716)}
+shrink_full: {24: (0.763, 2.818), 48: (0.819, 4.087), 72: (0.59, 3.875)}
+fixed offset: {24: -0.0, 48: 0.0, 72: -0.0}
+
+=== intensity MAE / bias by method and lead (test) ===
+                 bias             mae            
+lead               24   48   72    24    48    72
+method                                           
+affine_cal       2.45 3.69 3.47 11.89 16.40 17.39
+fixed_offset     2.76 4.04 3.85 12.13 17.04 18.61
+no_auditor       2.76 4.04 3.85 12.13 17.04 18.61
+office           3.69 4.11 2.69 13.40 17.88 19.13
+shuffled_auditor 3.70 4.12 2.69 13.84 18.50 19.31
+
+=== auditor case-wise skill vs fixed offset ===
+{
+ "24": {
+  "frac_adjusted": 0.5135520684736091,
+  "corr_adj_resid": 0.079,
+  "sign_acc": 0.594,
+  "mae_gain_auditor": -0.459,
+  "mae_gain_fixed_offset": 0.0
+ },
+ "48": {
+  "frac_adjusted": 0.7444821731748726,
+  "corr_adj_resid": 0.022,
+  "sign_acc": 0.585,
+  "mae_gain_auditor": 0.106,
+  "mae_gain_fixed_offset": -0.0
+ },
+ "72": {
+  "frac_adjusted": 0.5566137566137566,
+  "corr_adj_resid": -0.012,
+  "sign_acc": 0.542,
+  "mae_gain_auditor": -0.191,
+  "mae_gain_fixed_offset": 0.0
+ }
+}
+
+wrote auditor_id.json

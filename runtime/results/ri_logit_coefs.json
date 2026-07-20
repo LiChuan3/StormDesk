@@ -1,0 +1,20 @@
+{
+ "v0": 1.424,
+ "dv12": 0.612,
+ "dv24": -0.54,
+ "abslat": -0.313,
+ "mot_speed": -0.097,
+ "shear_kt": -0.048,
+ "sst_c": 0.094,
+ "rh_mid_pct": -0.08,
+ "pot_kt": 0.079,
+ "div200": -0.105,
+ "bt_min": 0.184,
+ "cold_frac": 0.185,
+ "quad_std": -0.212,
+ "analog_ri": 0.455,
+ "analog_dv24": 0.171,
+ "prior_dv24": 1.889,
+ "spread24": -0.171,
+ "vrange24": -0.625
+}

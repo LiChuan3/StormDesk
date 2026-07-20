@@ -1,0 +1,80 @@
+[
+ {
+  "case_id": "2018292N13269_2018102000",
+  "briefing": "STORM VICENTE (EP basin, 2018); forecast initialized 2018-10-20 00:00:00Z.\nCurrent: 13.6N 92.4W, Vmax 35 kt (tropical storm), motion 304 deg at 7 km/h, trend +5 kt/12h, +10 kt/24h. Distance to land 93 km.\nGUIDANCE (per lead: position / raw vmax kt / bias-corrected vmax kt):\n  pangu        | 24h: 13.0N 95.2W 10/17kt | 48h: 12.2N 96.2W 11/17kt | 72h: 14.2N 96.2W 17/27kt\n  fengwu       | 24h: 1.0N 68.2W 3/15kt | 48h: 5.5S 41.8W 11/19kt | 72h: 6.0N 51.5W 16/34kt\n  gru          | 24h: 14.8N 94.2W 49/50kt | 48h: 16.0N 95.9W 55/56kt | 72h: 16.9N 97.7W 54/55kt\n  transformer  | 24h: 15.0N 94.1W 49/51kt | 48h: 16.4N 95.5W 56/57kt | 72h: 17.6N 96.8W 54/54kt\n  cliper       | 24h: 14.4N 94.1W 45/46kt | 48h: 14.9N 96.4W 51/52kt | 72h: 15.2N 99.0W 52/52kt\n  cons_aiwp    | 24h: 7.0N 81.8W 7/15kt | 48h: 3.4N 69.0W 11/17kt | 72h: 10.1N 73.9W 16/29kt\nSPREAD 24h: mean track deviation 1077 km; vmax range 3-49 kt.\nSPREAD 48h: mean track deviation 2138 km; vmax range 11-56 kt.\nSPREAD 72h: mean track deviation 1726 km; vmax range 16-54 kt.\nMEMBER SKILL (2018-2020 fit; mean track error km @24/48/72h; vmax bias kt @24h):\n  pangu        track 89/167/257; vmax bias -28 kt\n  fengwu       track 88/168/293; vmax bias -29 kt\n  gru          track 171/408/658; vmax bias -1 kt\n  transformer  track 175/415/668; vmax bias -1 kt\n  cliper       track 193/449/726; vmax bias -0 kt\n  cons_aiwp    track 81/155/252; vmax bias -28 kt\nPRIOR WEIGHTS 24h: cons_aiwp 0.30, fengwu 0.26, pangu 0.25, gru 0.07, transformer 0.07, cliper 0.05\nPRIOR WEIGHTS 48h: cons_aiwp 0.32, pangu 0.28, fengwu 0.27, gru 0.05, transformer 0.04, cliper 0.04\nPRIOR WEIGHTS 72h: cons_aiwp 0.32, pangu 0.31, fengwu 0.24, gru 0.05, transformer 0.05, cliper 0.04\nMEMBER TRACK DIAGNOSTICS (computed for you; motion dev = deviation of implied 0-24h motion from observed motion):\n  pangu        motion dev 47 deg, speed ratio 2.00, 24h displacement 316 km; cluster distance 24/48/72h: 830/1535/1127 km\n  fengwu       motion dev 174 deg, speed ratio 18.82, 24h displacement 3004 km; cluster distance 24/48/72h: 2436/4811/3849 km\n  gru          motion dev 0 deg, speed ratio 1.54, 24h displacement 242 km; cluster distance 24/48/72h: 813/1624/1333 km\n  transformer  motion dev 7 deg, speed ratio 1.53, 24h displacement 241 km; cluster distance 24/48/72h: 810/1597/1265 km\n  cliper       motion dev 9 deg, speed ratio 1.27, 24h displacement 200 km; cluster distance 24/48/72h: 771/1623/1430 km\n  cons_aiwp    motion dev 178 deg, speed ratio 8.67, 24h displacement 1376 km; cluster distance 24/48/72h: 805/1637/1352 km",
+  "trust": {
+   "24": {
+    "pangu": 0.25,
+    "fengwu": 0.25,
+    "gru": 3.09,
+    "transformer": 3.28,
+    "cliper": 4.0
+   },
+   "48": {
+    "pangu": 0.27,
+    "fengwu": 0.25,
+    "gru": 4.0,
+    "transformer": 4.0,
+    "cliper": 4.0
+   },
+   "72": {
+    "pangu": 1.74,
+    "fengwu": 0.25,
+    "gru": 0.96,
+    "transformer": 0.99,
+    "cliper": 1.28
+   }
+  },
+  "gain24_km": 1156.7
+ },
+ {
+  "case_id": "2018186N10325_2018070900",
+  "briefing": "STORM BERYL (NA basin, 2018); forecast initialized 2018-07-09 00:00:00Z.\nCurrent: 15.5N 61.3W, Vmax 35 kt (tropical storm), motion 288 deg at 41 km/h, trend -10 kt/12h, -10 kt/24h. Distance to land 537 km.\nGUIDANCE (per lead: position / raw vmax kt / bias-corrected vmax kt):\n  pangu        | 24h: 11.2N 71.0W 22/39kt | 48h: 6.0N 74.5W 4/15kt | 72h: 5.8N 74.8W 4/15kt\n  fengwu       | 24h: 7.8N 73.8W 9/15kt | 48h: 7.8N 73.8W 5/15kt | 72h: 7.8N 73.8W 8/17kt\n  gru          | 24h: 17.9N 68.5W 41/41kt | 48h: 20.4N 74.1W 45/46kt | 72h: 23.2N 78.0W 48/50kt\n  transformer  | 24h: 18.0N 68.4W 41/42kt | 48h: 20.3N 74.0W 47/49kt | 72h: 23.0N 77.8W 53/53kt\n  cliper       | 24h: 17.8N 69.9W 36/38kt | 48h: 20.2N 75.8W 45/46kt | 72h: 22.9N 79.1W 52/53kt\n  cons_aiwp    | 24h: 9.5N 72.4W 16/25kt | 48h: 6.9N 74.1W 4/15kt | 72h: 6.8N 74.2W 6/15kt\nSPREAD 24h: mean track deviation 507 km; vmax range 9-41 kt.\nSPREAD 48h: mean track deviation 749 km; vmax range 4-47 kt.\nSPREAD 72h: mean track deviation 932 km; vmax range 4-53 kt.\nMEMBER SKILL (2018-2020 fit; mean track error km @24/48/72h; vmax bias kt @24h):\n  pangu        track 89/167/257; vmax bias -28 kt\n  fengwu       track 88/168/293; vmax bias -29 kt\n  gru          track 171/408/658; vmax bias -1 kt\n  transformer  track 175/415/668; vmax bias -1 kt\n  cliper       track 193/449/726; vmax bias -0 kt\n  cons_aiwp    track 81/155/252; vmax bias -28 kt\nPRIOR WEIGHTS 24h: cons_aiwp 0.30, fengwu 0.26, pangu 0.25, gru 0.07, transformer 0.07, cliper 0.05\nPRIOR WEIGHTS 48h: cons_aiwp 0.32, pangu 0.28, fengwu 0.27, gru 0.05, transformer 0.04, cliper 0.04\nPRIOR WEIGHTS 72h: cons_aiwp 0.32, pangu 0.31, fengwu 0.24, gru 0.05, transformer 0.05, cliper 0.04\nMEMBER TRACK DIAGNOSTICS (computed for you; motion dev = deviation of implied 0-24h motion from observed motion):\n  pangu        motion dev 43 deg, speed ratio 1.15, 24h displacement 1151 km; cluster distance 24/48/72h: 276/843/1029 km\n  fengwu       motion dev 51 deg, speed ratio 1.59, 24h displacement 1606 km; cluster distance 24/48/72h: 743/652/839 km\n  gru          motion dev 1 deg, speed ratio 0.82, 24h displacement 815 km; cluster distance 24/48/72h: 524/759/942 km\n  transformer  motion dev 2 deg, speed ratio 0.82, 24h displacement 809 km; cluster distance 24/48/72h: 533/745/914 km\n  cliper       motion dev 3 deg, speed ratio 0.96, 24h displacement 953 km; cluster distance 24/48/72h: 463/748/936 km\n  cons_aiwp    motion dev 48 deg, speed ratio 1.37, 24h displacement 1375 km; cluster distance 24/48/72h: 504/745/931 km",
+  "trust": {
+   "24": {
+    "pangu": 0.32,
+    "fengwu": 0.25,
+    "gru": 4.0,
+    "transformer": 3.14,
+    "cliper": 2.34
+   },
+   "48": {
+    "pangu": 0.25,
+    "fengwu": 0.25,
+    "gru": 4.0,
+    "transformer": 3.84,
+    "cliper": 3.19
+   },
+   "72": {
+    "pangu": 0.25,
+    "fengwu": 0.52,
+    "gru": 3.61,
+    "transformer": 3.93,
+    "cliper": 3.97
+   }
+  },
+  "gain24_km": 643.6
+ },
+ {
+  "case_id": "2018351S09059_2018122100",
+  "briefing": "STORM CILIDA (SI basin, 2019); forecast initialized 2018-12-21 00:00:00Z.\nCurrent: 14.2S 58.2E, Vmax 100 kt (cat 3), motion 226 deg at 13 km/h, trend +10 kt/12h, +35 kt/24h. Distance to land 673 km.\nGUIDANCE (per lead: position / raw vmax kt / bias-corrected vmax kt):\n  gru          | 24h: 15.3S 56.3E 94/96kt | 48h: 16.9S 54.8E 78/80kt | 72h: 18.6S 53.7E 64/65kt\n  transformer  | 24h: 15.2S 56.3E 94/95kt | 48h: 16.6S 54.6E 77/78kt | 72h: 18.1S 53.3E 63/63kt\n  cliper       | 24h: 15.8S 56.1E 95/94kt | 48h: 17.7S 54.7E 80/79kt | 72h: 19.5S 54.1E 66/66kt\nSPREAD 24h: mean track deviation 30 km; vmax range 94-95 kt.\nSPREAD 48h: mean track deviation 48 km; vmax range 77-80 kt.\nSPREAD 72h: mean track deviation 65 km; vmax range 63-66 kt.\nMEMBER SKILL (2018-2020 fit; mean track error km @24/48/72h; vmax bias kt @24h):\n  gru          track 171/408/658; vmax bias -1 kt\n  transformer  track 175/415/668; vmax bias -1 kt\n  cliper       track 193/449/726; vmax bias -0 kt\nPRIOR WEIGHTS 24h: gru 0.37, transformer 0.35, cliper 0.29\nPRIOR WEIGHTS 48h: gru 0.36, transformer 0.35, cliper 0.29\nPRIOR WEIGHTS 72h: gru 0.36, transformer 0.35, cliper 0.29\nMEMBER TRACK DIAGNOSTICS (computed for you; motion dev = deviation of implied 0-24h motion from observed motion):\n  gru          motion dev 13 deg, speed ratio 0.80, 24h displacement 240 km; cluster distance 24/48/72h: 19/25/15 km\n  transformer  motion dev 14 deg, speed ratio 0.78, 24h displacement 234 km; cluster distance 24/48/72h: 27/48/83 km\n  cliper       motion dev 4 deg, speed ratio 0.97, 24h displacement 292 km; cluster distance 24/48/72h: 46/70/96 km",
+  "trust": {
+   "24": {
+    "gru": 1.05,
+    "transformer": 1.04,
+    "cliper": 0.89
+   },
+   "48": {
+    "gru": 1.02,
+    "transformer": 0.97,
+    "cliper": 1.0
+   },
+   "72": {
+    "gru": 1.1,
+    "transformer": 0.91,
+    "cliper": 0.98
+   }
+  },
+  "gain24_km": -0.1
+ }
+]

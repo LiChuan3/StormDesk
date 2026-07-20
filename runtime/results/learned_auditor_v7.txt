@@ -1,0 +1,11 @@
+=== R3 learned feature-based auditor (drop-in for LLM auditor+chief) ===
+  24h: MAE 11.34 kt, bias +1.45 (n=1282)
+  48h: MAE 14.96 kt, bias +2.69 (n=1070)
+  72h: MAE 15.93 kt, bias +2.45 (n=859)
+  (compare Table: no-auditor 12.1/17.0/18.6, LLM office 13.4/17.9/19.1, affine 11.9/16.4/17.4)
+
+=== R4 post-processed AIWP intensity (env-conditioned GBT on raw AIWP) ===
+  24h: MAE 10.55 kt, bias +0.34
+  48h: MAE 13.60 kt, bias +0.24
+  72h: MAE 14.81 kt, bias +0.88
+  (raw AIWP tracker: 26/27/27 kt MAE; bias-corr consensus: 12.0/16.5/17.9) -> /data/yuxiaoning/projects/stormdesk_runtime/forecasts/test_aiwp_postproc.jsonl

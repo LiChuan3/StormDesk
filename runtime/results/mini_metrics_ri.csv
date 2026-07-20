@@ -1,0 +1,5 @@
+method,events,hits,misses,false_alarms,pod,far,csi
+agent_mini_qwen14b,97,1,96,3,0.010309278350515464,0.75,0.01
+agent_full_qwen14b,97,0,97,10,0.0,1.0,0.0
+hybrid_static,88,0,88,1,0.0,1.0,0.0
+cons_weighted,97,0,97,0,0.0,,0.0

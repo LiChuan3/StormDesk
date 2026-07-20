@@ -1,0 +1,12 @@
+                    target                ref  lead    n  track_diff     track_ci90  track_p  track_margin  track_equiv  vmax_diff       vmax_ci90  vmax_p  vmax_equiv
+   agent_featmatch_qwen14b      hybrid_static    24 1282       15.09  [8.53, 21.31]    0.001          10.0        False      0.359 [-0.015, 0.713]  0.1100        True
+   agent_featmatch_qwen14b      hybrid_static    48 1102       25.01 [16.69, 33.73]    0.000          15.0        False      0.237 [-0.244, 0.729]  0.4510        True
+   agent_featmatch_qwen14b      hybrid_static    72  907       18.78  [3.98, 32.44]    0.042          20.0        False      0.532  [0.027, 1.032]  0.0860       False
+agent_featmatch_fs_qwen14b      hybrid_static    24 1282       33.07 [25.75, 39.76]    0.000          10.0        False      0.663   [0.26, 1.044]  0.0050       False
+agent_featmatch_fs_qwen14b      hybrid_static    48 1102       74.84 [61.68, 87.66]    0.000          15.0        False      0.324 [-0.117, 0.755]  0.2305        True
+agent_featmatch_fs_qwen14b      hybrid_static    72  907       68.86 [47.92, 87.48]    0.000          20.0        False      1.029  [0.535, 1.535]  0.0000       False
+agent_featmatch_fs_qwen14b agent_full_qwen14b    24 1282       31.61 [26.56, 36.36]    0.000          10.0        False      0.114 [-0.236, 0.463]  0.6105        True
+agent_featmatch_fs_qwen14b agent_full_qwen14b    48 1102       71.55  [60.8, 82.33]    0.000          15.0        False     -0.086 [-0.431, 0.281]  0.6925        True
+agent_featmatch_fs_qwen14b agent_full_qwen14b    72  907       72.84 [58.49, 86.51]    0.000          20.0        False      0.384 [-0.017, 0.791]  0.1155        True
+
+wrote equivalence.json

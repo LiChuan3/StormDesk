@@ -1,0 +1,4 @@
+cycles with transcripts: 1429
+lead 24h: nudge used in 80 cycles (5.6%), median 20 km (p90 30); effect on error: mean +2.9 km, median +3.9, helped in 38% of used cycles
+lead 48h: nudge used in 104 cycles (7.3%), median 30 km (p90 50); effect on error: mean +3.7 km, median +5.7, helped in 40% of used cycles
+lead 72h: nudge used in 170 cycles (11.9%), median 30 km (p90 60); effect on error: mean +3.9 km, median +4.9, helped in 46% of used cycles

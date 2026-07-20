@@ -1,0 +1,77 @@
+{
+ "own-calibrated": {
+  "points": {
+   "24": {
+    "track": 77.9,
+    "hybrid_track": 76.8,
+    "track_p": 0.7618,
+    "vmax": 12.22,
+    "hybrid_vmax": 12.14,
+    "vmax_p": 0.8009
+   },
+   "48": {
+    "track": 143.9,
+    "hybrid_track": 139.0,
+    "track_p": 0.3197,
+    "vmax": 17.36,
+    "hybrid_vmax": 17.71,
+    "vmax_p": 0.2408
+   },
+   "72": {
+    "track": 241.9,
+    "hybrid_track": 241.5,
+    "track_p": 0.9616,
+    "vmax": 20.66,
+    "hybrid_vmax": 20.22,
+    "vmax_p": 0.035
+   }
+  },
+  "ri": {
+   "events": 32,
+   "pod": 0.656,
+   "far": 0.918,
+   "csi": 0.079,
+   "n": 487
+  }
+ },
+ "transferred": {
+  "points": {
+   "24": {
+    "track": 71.8,
+    "hybrid_track": 65.2,
+    "track_p": 0.0364,
+    "vmax": 14.1,
+    "hybrid_vmax": 13.66,
+    "vmax_p": 0.3441
+   },
+   "48": {
+    "track": 114.8,
+    "hybrid_track": 97.4,
+    "track_p": 0.001,
+    "vmax": 20.57,
+    "hybrid_vmax": 20.23,
+    "vmax_p": 0.411
+   },
+   "72": {
+    "track": 157.0,
+    "hybrid_track": 129.2,
+    "track_p": 0.0057,
+    "vmax": 23.95,
+    "hybrid_vmax": 23.5,
+    "vmax_p": 0.4126
+   }
+  },
+  "ri": {
+   "events": 21,
+   "pod": 0.714,
+   "far": 0.882,
+   "csi": 0.113,
+   "n": 246
+  }
+ },
+ "platt": {
+  "a": 0.481,
+  "b": -2.288,
+  "threshold": 0.07999999999999999
+ }
+}

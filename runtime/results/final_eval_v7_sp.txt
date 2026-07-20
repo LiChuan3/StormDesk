@@ -1,0 +1,46 @@
+methods: {'hybrid_static': 1319, 'aiwp_postproc': 1298, 'agent_full_qwen14b': 1429, 'agent_full_qwen14b_strongprior': 1298}
+case-list restriction: {24: 1282, 48: 1102, 72: 907}
+
+=== lead 24 h (n=1282) ===
+                        method    n  track_km  vmax_mae_kt  vmax_bias_kt  track_skill_pct  vmax_skill_pct
+                 hybrid_static 1282      70.0         12.0           1.0              0.0             0.0
+                 aiwp_postproc 1282      70.0         10.5           0.3              0.0            12.1
+agent_full_qwen14b_strongprior 1282      71.2         11.4          -1.6             -1.6             4.9
+            agent_full_qwen14b 1282      71.5         12.5          -1.6             -2.1            -4.6
+
+=== lead 48 h (n=1102) ===
+                        method    n  track_km  vmax_mae_kt  vmax_bias_kt  track_skill_pct  vmax_skill_pct
+                 hybrid_static 1102     124.1         16.4           1.1              0.0             0.0
+                 aiwp_postproc 1102     124.1         13.6           0.2              0.0            17.1
+            agent_full_qwen14b 1102     127.4         16.8          -0.1             -2.7            -2.5
+agent_full_qwen14b_strongprior 1102     127.5         14.9          -0.3             -2.8             9.5
+
+=== lead 72 h (n=907) ===
+                        method   n  track_km  vmax_mae_kt  vmax_bias_kt  track_skill_pct  vmax_skill_pct
+            agent_full_qwen14b 907     209.7         18.5           1.2              1.9            -3.6
+agent_full_qwen14b_strongprior 907     210.2         15.5           0.3              1.6            13.4
+                 aiwp_postproc 907     213.7         14.8           0.9              0.0            17.2
+                 hybrid_static 907     213.7         17.9           1.2              0.0             0.0
+
+=== RI (>= +30 kt / 24 h), deterministic dV ===
+                        method  events  hits  misses  false_alarms   pod   far   csi
+                 hybrid_static      88     0      88             1 0.000 1.000 0.000
+                 aiwp_postproc      88     7      81            14 0.080 0.667 0.069
+            agent_full_qwen14b      97     0      97            10 0.000 1.000 0.000
+agent_full_qwen14b_strongprior      88    12      76            21 0.136 0.636 0.110
+
+=== RI via explicit probability (p >= 0.5), agents ===
+                        method  events  hits  misses  false_alarms   pod   far   csi
+            agent_full_qwen14b      97    65      32           295 0.670 0.819 0.166
+agent_full_qwen14b_strongprior      88    58      30           257 0.659 0.816 0.168
+
+=== paired tests (serial-correlation-adjusted t; Holm per target) ===
+                        target           ref  lead metric    n  mean_diff      p  p_holm
+agent_full_qwen14b_strongprior aiwp_postproc    24  track 1282     1.1207 0.4751  0.8615
+agent_full_qwen14b_strongprior aiwp_postproc    24   vmax 1282     0.8536 0.0000  0.0000
+agent_full_qwen14b_strongprior aiwp_postproc    48  track 1102     3.4457 0.0870  0.2611
+agent_full_qwen14b_strongprior aiwp_postproc    48   vmax 1070     1.2474 0.0000  0.0000
+agent_full_qwen14b_strongprior aiwp_postproc    72  track  907    -3.4856 0.4307  0.8615
+agent_full_qwen14b_strongprior aiwp_postproc    72   vmax  859     0.6747 0.0048  0.0193
+
+wrote /data/yuxiaoning/projects/stormdesk_runtime/results/v7_sp_metrics.csv

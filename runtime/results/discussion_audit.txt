@@ -1,0 +1,18 @@
+200 discussions sampled from 1429
+25/200
+50/200
+75/200
+100/200
+125/200
+150/200
+175/200
+200/200
+
+audited 200/200 (judge parse failures: 0)
+numeric claims/discussion: mean 13.1; claim-level mismatch rate: 9.0%
+discussions with zero numeric mismatches: 44.0%
+consistent with issued forecast: 68.5%
+ungrounded facts/discussion: mean 0.42; zero-ungrounded: 63.5%
+verdicts: {'clean': 86, 'minor_issues': 101, 'major_issues': 13}
+deterministic numeric grounding: mean 99.4% of numbers found in briefing/forecast
+wrote /data/yuxiaoning/projects/stormdesk_runtime/results/test_discussion_audit.jsonl

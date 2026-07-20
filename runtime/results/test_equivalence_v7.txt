@@ -1,0 +1,33 @@
+                     target                ref  lead    n  track_diff       track_ci90  track_p  track_margin  track_equiv  vmax_diff        vmax_ci90  vmax_p  vmax_equiv
+         agent_full_qwen14b      hybrid_static    24 1282        1.46    [-1.48, 4.18]   0.3710          10.0         True      0.549   [0.192, 0.886]  0.0145        True
+         agent_full_qwen14b      hybrid_static    48 1102        3.29     [0.11, 6.43]   0.0890          15.0         True      0.410  [-0.062, 0.856]  0.1525        True
+         agent_full_qwen14b      hybrid_static    72  907       -3.98   [-12.68, 3.43]   0.3970          20.0         True      0.645    [0.164, 1.17]  0.0300       False
+    agent_full_qwen14b_anon agent_full_qwen14b    24 1282       -0.70     [-1.81, 0.4]   0.3100          10.0         True     -0.190  [-0.566, 0.187]  0.3810        True
+    agent_full_qwen14b_anon agent_full_qwen14b    48 1102        1.16    [-0.44, 2.86]   0.2365          15.0         True     -0.321 [-0.646, -0.005]  0.0960        True
+    agent_full_qwen14b_anon agent_full_qwen14b    72  907        2.61    [-0.66, 6.37]   0.2065          20.0         True     -0.112  [-0.509, 0.285]  0.6495        True
+               learned_gbt2      hybrid_static    24 1282       -5.66  [-10.97, -0.71]   0.0575          10.0        False     -1.092  [-1.465, -0.74]  0.0000       False
+               learned_gbt2      hybrid_static    48 1102       -8.11  [-16.58, -0.35]   0.0860          15.0        False     -1.210 [-1.638, -0.785]  0.0000       False
+               learned_gbt2      hybrid_static    72  907      -37.95 [-62.24, -16.19]   0.0000          20.0        False     -0.763 [-1.338, -0.172]  0.0295       False
+       learned_gbt_contract      hybrid_static    24 1282       -4.53   [-9.63, -0.01]   0.0990          10.0         True     -0.834 [-1.345, -0.345]  0.0040       False
+       learned_gbt_contract      hybrid_static    48 1102       -6.47   [-14.06, 0.41]   0.1255          15.0         True     -0.833 [-1.504, -0.148]  0.0430       False
+       learned_gbt_contract      hybrid_static    72  907      -34.13 [-57.63, -13.77]   0.0010          20.0        False     -0.087  [-1.054, 0.865]  0.8570       False
+         agent_mini_qwen14b      hybrid_static    24 1282        4.57     [2.03, 6.98]   0.0035          10.0         True     -0.061   [-0.373, 0.25]  0.7475        True
+         agent_mini_qwen14b      hybrid_static    48 1102        9.56    [5.95, 13.09]   0.0000          15.0         True     -0.044  [-0.487, 0.405]  0.8900        True
+         agent_mini_qwen14b      hybrid_static    72  907        8.25    [-0.07, 15.8]   0.1060          20.0         True      0.642   [0.182, 1.089]  0.0150       False
+agent_single_refine_qwen14b      hybrid_static    24 1282        1.21    [-0.61, 2.94]   0.2695          10.0         True     -0.197  [-0.446, 0.047]  0.1800        True
+agent_single_refine_qwen14b      hybrid_static    48 1102        2.19     [0.07, 4.28]   0.0930          15.0         True      0.048  [-0.377, 0.479]  0.8750        True
+agent_single_refine_qwen14b      hybrid_static    72  907       -1.21     [-6.2, 3.11]   0.6635          20.0         True      0.138  [-0.393, 0.678]  0.6775        True
+              static_convex      hybrid_static    24 1282       -0.57    [-1.43, 0.23]   0.2255          10.0         True      0.000       [0.0, 0.0]  0.0000        True
+              static_convex      hybrid_static    48 1102       -0.60     [-1.88, 0.6]   0.4065          15.0         True      0.000       [0.0, 0.0]  0.0000        True
+              static_convex      hybrid_static    72  907       -4.57   [-16.19, 6.38]   0.5075          20.0         True      0.000       [0.0, 0.0]  0.0000        True
+               static_basin      static_convex    24 1282       -3.62    [-7.63, 0.16]   0.1155          10.0         True      0.000       [0.0, 0.0]  0.0000        True
+               static_basin      static_convex    48 1102       -6.52   [-13.91, 0.37]   0.1205          15.0         True      0.000       [0.0, 0.0]  0.0000        True
+               static_basin      static_convex    72  907      -11.58  [-21.67, -2.08]   0.0425          20.0        False      0.000       [0.0, 0.0]  0.0000        True
+                static_icat      static_convex    24 1282        0.12    [-0.33, 0.56]   0.6395          10.0         True      0.000       [0.0, 0.0]  0.0000        True
+                static_icat      static_convex    48 1102        1.55     [0.38, 2.81]   0.0240          15.0         True      0.000       [0.0, 0.0]  0.0000        True
+                static_icat      static_convex    72  907        1.64     [-2.7, 6.54]   0.5845          20.0         True      0.000       [0.0, 0.0]  0.0000        True
+                 gate_ridge      static_convex    24 1282       -0.85    [-6.11, 3.76]   0.7860          10.0         True      0.000       [0.0, 0.0]  0.0000        True
+                 gate_ridge      static_convex    48 1102        2.39    [-1.73, 6.44]   0.3330          15.0         True      0.000       [0.0, 0.0]  0.0000        True
+                 gate_ridge      static_convex    72  907       -2.10   [-15.45, 9.59]   0.8100          20.0         True      0.000       [0.0, 0.0]  0.0000        True
+
+wrote equivalence.json

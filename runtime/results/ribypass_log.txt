@@ -1,0 +1,22 @@
+bypassed 142 cycles -> /data/yuxiaoning/projects/stormdesk_runtime/forecasts/test_agent_full_qwen14b_ribypass.jsonl
+         method  lead    n  track_km  vmax_mae_kt  vmax_bias_kt
+         office    24 1317     73.62        12.55         -1.55
+office_ribypass    24 1317     73.62        12.91          0.40
+  hybrid_static    24 1317     72.18        12.03          1.14
+         office    48 1136    130.87        16.77         -0.12
+office_ribypass    48 1136    130.87        16.77         -0.12
+  hybrid_static    48 1136    127.28        16.43          1.10
+         office    72  935    214.10        18.49          1.18
+office_ribypass    72  935    214.10        18.49          1.18
+  hybrid_static    72  935    216.82        17.89          1.16
+
+deterministic RI (dV >= +30 kt):
+         method  events  hits  misses  false_alarms   pod   far   csi
+         office      97     0      97            10 0.000 1.000 0.000
+office_ribypass      97    23      74            60 0.237 0.723 0.146
+  hybrid_static      88     0      88             1 0.000 1.000 0.000
+
+probabilistic RI (calibrated threshold):
+         method  events  hits  misses  false_alarms   pod   far   csi
+         office      97    65      32           295 0.670 0.819 0.166
+office_ribypass      97    65      32           295 0.670 0.819 0.166

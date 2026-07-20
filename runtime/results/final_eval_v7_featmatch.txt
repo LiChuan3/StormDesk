@@ -1,0 +1,95 @@
+methods: {'hybrid_static': 1319, 'static_convex': 1431, 'static_basin': 1431, 'learned_gbt2': 1403, 'learned_gbt_contract': 1403, 'aiwp_postproc': 1298, 'agent_full_qwen14b': 1429, 'agent_full_qwen14b_gateadv': 1431, 'agent_single_refine_qwen14b': 1427, 'agent_featmatch_qwen14b': 1431, 'agent_featmatch_fs_qwen14b': 1431}
+case-list restriction: {24: 1282, 48: 1102, 72: 907}
+
+=== lead 24 h (n=1282) ===
+                     method    n  track_km  vmax_mae_kt  vmax_bias_kt  track_skill_pct  vmax_skill_pct
+               learned_gbt2 1282      64.4         10.9           1.0              8.1             9.1
+       learned_gbt_contract 1282      65.5         11.2           0.8              6.5             6.9
+               static_basin 1282      65.9         12.0           1.0              6.0             0.0
+ agent_full_qwen14b_gateadv 1282      68.9         12.3          -2.2              1.6            -2.2
+              static_convex 1282      69.5         12.0           1.0              0.8             0.0
+              hybrid_static 1282      70.0         12.0           1.0              0.0             0.0
+              aiwp_postproc 1282      70.0         10.5           0.3              0.0            12.1
+agent_single_refine_qwen14b 1282      71.3         11.8           1.1             -1.7             1.6
+         agent_full_qwen14b 1282      71.5         12.5          -1.6             -2.1            -4.6
+    agent_featmatch_qwen14b 1282      85.1         12.4          -2.7            -21.5            -3.0
+ agent_featmatch_fs_qwen14b 1282     103.1         12.7          -3.1            -47.2            -5.5
+
+=== lead 48 h (n=1102) ===
+                     method    n  track_km  vmax_mae_kt  vmax_bias_kt  track_skill_pct  vmax_skill_pct
+               learned_gbt2 1102     116.0         15.2           0.6              6.5             7.4
+               static_basin 1102     117.0         16.4           1.1              5.7             0.0
+       learned_gbt_contract 1102     117.6         15.6           0.5              5.2             5.1
+ agent_full_qwen14b_gateadv 1102     123.0         16.7          -0.8              0.9            -1.5
+              static_convex 1102     123.5         16.4           1.1              0.5             0.0
+              hybrid_static 1102     124.1         16.4           1.1              0.0             0.0
+              aiwp_postproc 1102     124.1         13.6           0.2              0.0            17.1
+agent_single_refine_qwen14b 1102     126.3         16.5           2.8             -1.8            -0.3
+         agent_full_qwen14b 1102     127.4         16.8          -0.1             -2.7            -2.5
+    agent_featmatch_qwen14b 1102     149.1         16.7          -0.5            -20.2            -1.4
+ agent_featmatch_fs_qwen14b 1102     198.9         16.7          -0.6            -60.3            -2.0
+
+=== lead 72 h (n=907) ===
+                     method   n  track_km  vmax_mae_kt  vmax_bias_kt  track_skill_pct  vmax_skill_pct
+               learned_gbt2 907     175.7         17.1           1.0             17.8             4.3
+       learned_gbt_contract 907     179.5         17.8           1.2             16.0             0.5
+               static_basin 907     197.5         17.9           1.2              7.6             0.0
+ agent_full_qwen14b_gateadv 907     204.1         18.4           0.7              4.5            -3.0
+              static_convex 907     209.1         17.9           1.2              2.1             0.0
+         agent_full_qwen14b 907     209.7         18.5           1.2              1.9            -3.6
+agent_single_refine_qwen14b 907     212.5         18.0           3.3              0.6            -0.8
+              hybrid_static 907     213.7         17.9           1.2              0.0             0.0
+              aiwp_postproc 907     213.7         14.8           0.9              0.0            17.2
+    agent_featmatch_qwen14b 907     232.5         18.4           1.1             -8.8            -3.0
+ agent_featmatch_fs_qwen14b 907     282.5         18.9           1.7            -32.2            -5.8
+
+=== RI (>= +30 kt / 24 h), deterministic dV ===
+                     method  events  hits  misses  false_alarms   pod   far   csi
+              hybrid_static      88     0      88             1 0.000 1.000 0.000
+              static_convex      97     0      97             1 0.000 1.000 0.000
+               static_basin      97     0      97             1 0.000 1.000 0.000
+               learned_gbt2      97    10      87            16 0.103 0.615 0.088
+       learned_gbt_contract      97    18      79            52 0.186 0.743 0.121
+              aiwp_postproc      88     7      81            14 0.080 0.667 0.069
+         agent_full_qwen14b      97     0      97            10 0.000 1.000 0.000
+ agent_full_qwen14b_gateadv      97     1      96             8 0.010 0.889 0.010
+agent_single_refine_qwen14b      97     0      97             3 0.000 1.000 0.000
+    agent_featmatch_qwen14b      97     0      97             7 0.000 1.000 0.000
+ agent_featmatch_fs_qwen14b      97     1      96             3 0.010 0.750 0.010
+
+=== RI via explicit probability (p >= 0.5), agents ===
+                     method  events  hits  misses  false_alarms   pod   far   csi
+         agent_full_qwen14b      97    65      32           295 0.670 0.819 0.166
+ agent_full_qwen14b_gateadv      97    62      35           302 0.639 0.830 0.155
+agent_single_refine_qwen14b      97    62      35           299 0.639 0.828 0.157
+    agent_featmatch_qwen14b      97    66      31           308 0.680 0.824 0.163
+ agent_featmatch_fs_qwen14b      97    63      34           303 0.649 0.828 0.158
+
+=== paired tests (serial-correlation-adjusted t; Holm per target) ===
+                    target                ref  lead metric    n  mean_diff      p  p_holm
+   agent_featmatch_qwen14b      hybrid_static    24  track 1282    15.0860 0.0001  0.0011
+   agent_featmatch_qwen14b      hybrid_static    24   vmax 1282     0.3588 0.1189  0.5947
+   agent_featmatch_qwen14b      hybrid_static    48  track 1102    25.0135 0.0000  0.0000
+   agent_featmatch_qwen14b      hybrid_static    48   vmax 1070     0.2365 0.4045  1.0000
+   agent_featmatch_qwen14b      hybrid_static    72  track  907    18.7768 0.0285  0.1995
+   agent_featmatch_qwen14b      hybrid_static    72   vmax  859     0.5322 0.0927  0.5561
+   agent_featmatch_qwen14b agent_full_qwen14b    24  track 1282    13.6258 0.0000  0.0000
+   agent_featmatch_qwen14b agent_full_qwen14b    24   vmax 1282    -0.1906 0.3849  1.0000
+   agent_featmatch_qwen14b agent_full_qwen14b    48  track 1102    21.7228 0.0000  0.0000
+   agent_featmatch_qwen14b agent_full_qwen14b    48   vmax 1070    -0.1736 0.4973  1.0000
+   agent_featmatch_qwen14b agent_full_qwen14b    72  track  907    22.7539 0.0000  0.0000
+   agent_featmatch_qwen14b agent_full_qwen14b    72   vmax  859    -0.1132 0.6672  1.0000
+agent_featmatch_fs_qwen14b      hybrid_static    24  track 1282    33.0669 0.0000  0.0000
+agent_featmatch_fs_qwen14b      hybrid_static    24   vmax 1282     0.6632 0.0053  0.0264
+agent_featmatch_fs_qwen14b      hybrid_static    48  track 1102    74.8374 0.0000  0.0000
+agent_featmatch_fs_qwen14b      hybrid_static    48   vmax 1070     0.3243 0.2724  0.8171
+agent_featmatch_fs_qwen14b      hybrid_static    72  track  907    68.8647 0.0000  0.0000
+agent_featmatch_fs_qwen14b      hybrid_static    72   vmax  859     1.0291 0.0008  0.0050
+agent_featmatch_fs_qwen14b agent_full_qwen14b    24  track 1282    31.6068 0.0000  0.0000
+agent_featmatch_fs_qwen14b agent_full_qwen14b    24   vmax 1282     0.1137 0.6030  1.0000
+agent_featmatch_fs_qwen14b agent_full_qwen14b    48  track 1102    71.5467 0.0000  0.0000
+agent_featmatch_fs_qwen14b agent_full_qwen14b    48   vmax 1070    -0.0859 0.7249  1.0000
+agent_featmatch_fs_qwen14b agent_full_qwen14b    72  track  907    72.8418 0.0000  0.0000
+agent_featmatch_fs_qwen14b agent_full_qwen14b    72   vmax  859     0.3837 0.1255  0.5020
+
+wrote /data/yuxiaoning/projects/stormdesk_runtime/results/v7_featmatch_metrics.csv
