@@ -129,5 +129,11 @@ public Pangu-Weather, FengWu, Qwen2.5 and Llama-3.1 checkpoints. Raw reanalysis
 and satellite archives are not redistributed here; the derived per-cycle inputs
 in `runtime/` are.
 
+The test bed spans every basin. Member skill is strongly heterogeneous, and raw
+AIWP intensity is far too weak, which is exactly the conflict the policies are
+asked to resolve:
+
+![The 2021–2022 test seasons](assets/landscape.png)
+
 The accompanying paper is under double-blind review. A preprint link will be
 added here after the decision.
