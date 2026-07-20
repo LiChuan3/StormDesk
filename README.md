@@ -1,90 +1,133 @@
 # StormDesk
 
-**Do Zero-Shot LLMs Add Case-Specific Skill to Ensemble Forecasting? A Controlled Study of Tropical Cyclones.**
+StormDesk is a virtual tropical cyclone forecast office run by LLM agents, built
+to answer one question under controlled conditions:
 
-StormDesk is a virtual forecast office of LLM agents for tropical cyclone (TC)
-prediction, built deliberately as an *experimental subject*. Every policy, LLM
-or not, reads the same tool-computed briefing and acts inside the same bounded
-contract; a ladder of static, regime-conditioned, and supervised reference
-policies measures what kind of skill each gain represents. The headline result
-is negative and controlled: safety comes from the contract, case adaptation
-comes from supervision, and the zero-shot LLM's headroom utilization is
-statistically indistinguishable from zero.
+> Given the same evidence and the same bounded action space, can a zero-shot LLM
+> combine forecast guidance as well as a learned decision policy?
 
-This repository is the full release promised in the paper: pipeline code, exact
-prompts, calibration artifacts, the frozen analysis manifest, every policy's
-forecasts and transcripts, and every figure and table generator.
+Deterministic tools compute a briefing for every forecast cycle. Every policy,
+LLM or not, reads that same briefing and acts through the same bounded contract.
+A ladder of static, regime-conditioned and supervised reference policies then
+pins down what kind of skill each gain actually represents.
 
-## Repository map
+![Overview: the controlled question](assets/overview.png)
 
-```
-stormdesk/           the package: briefing tools, office/agents, contract,
-                     combiner, corrector, evaluation (TOST, Holm, bootstrap)
-  agents/prompts.py  the exact office prompts quoted in the supplementary
-scripts/             numbered pipeline stages (00-32) + figure/export scripts
-server/              vLLM launch/sync helpers for a multi-node cluster
-docs/                internal design notes
-paper/               figure/table generators for the paper
-  figures/make_figs_v2.py       matplotlib results figures (Figs. 3-8)
-  figures/make_fig{1,2}_ppt.py  overview / office diagrams (PowerPoint COM)
-  make_supp_tables.py           supplementary tables from results CSVs
-runtime/             released artifacts
-  cases/             forecast-cycle tables per split (IBTrACS-derived)
-  features/          environmental + satellite diagnostics
-  guidance/          merged guidance per cycle
-  models/            every statistical anchor: skill/bias profiles, per-pipeline
-                     shrinkages, Platt scalings, gates, post-processors,
-                     office_calibration*.json, ri_calibration.json, few-shot examples
-  forecasts/         every policy's forecasts (test_*.jsonl, calib_*.jsonl)
-  transcripts/       full office deliberations for every LLM run
-  results/           frozen analysis manifest (test_manifest.json), metrics,
-                     significance, equivalence, headroom, RI verification CSVs
-```
+## The office
 
-## The pipeline
+The office makes five LLM calls per cycle: a chief forecaster sets the agenda, a
+track specialist adjusts member trust weights, an intensity specialist proposes
+bounded corrections, a physics auditor reviews the draft, and the chief issues
+the final forecast with a written discussion. Every number is assembled by code;
+the agents only act inside the contract.
 
-```
-00_build_cases.py        case tables per era split (train/val/calib/test)
-01_extract_features.py   environmental + satellite diagnostics from ERA5/GridSat crops
-02_run_aiwp.py           Pangu-Weather / FengWu guidance (GPU, shardable)
-03_train_specialists.py  CLIPER + GRU/Transformer specialists (year-split)
-04_build_analogs.py      1980-2015 analog library
-05_run_baselines.py      persistence/CLIPER/DL forecasts (+ --consensus family)
-05b_fit_calibration.py   member skill profiles + intensity bias maps (2018-2020)
-06_run_agent.py          the StormDesk office and every LLM policy variant
-07_evaluate.py           NHC-style homogeneous verification + RI scores
-08-32                    behavior analysis, RI classifiers, learned gate/stack,
-                         replay identification, TOST, regime statics, headroom U,
-                         few-shot construction, Llama recalibration
-```
+![The StormDesk office](assets/office.png)
 
-## Reproducing the paper numbers
+## Findings
 
-All point-forecast means, tests, and confidence intervals are computed on the
-frozen analysis manifest (`runtime/results/test_manifest.json`, per-lead case
-lists with MD5 hashes). No number is transcribed by hand.
+Evaluated on 1,433 forecast cycles over 180 storms from the 2021–2022 seasons,
+against 35 policies on one frozen homogeneous sample:
+
+**Safety comes from the contract.** Asked for coordinates directly, the LLM
+drops hemisphere signs and 43–45% of its positions land more than 2,000 km off
+track. Inside the contract, the office is statistically equivalent to the
+static prior at every lead time.
+
+**Case adaptation comes from supervision.** A gradient-boosted gate proves that
+real headroom exists inside the same bounds. The office realizes essentially
+none of it, and when handed the gate's own features with a prompt that licenses
+decisive reweighting, it becomes clearly worse than its conservative self.
+
+![Headroom utilization](assets/headroom.png)
+
+The pattern repeats at every stage we instrumented: logistic regression beats
+the office's rapid intensification probabilities, a small learned auditor beats
+the LLM auditor, and the office degrades a stronger intensity prior when handed
+one. The paper reports this as a controlled negative result.
+
+## What is in this repository
+
+Everything needed to replay the analysis, without any GPU:
 
 ```
+stormdesk/            the package
+  agents/prompts.py   the exact office prompts, verbatim
+  agents/office.py    the five-call office and every policy variant
+  evaluate.py         homogeneous verification, bootstrap, TOST, Holm
+scripts/              numbered pipeline stages 00–32
+server/               vLLM launch and cluster sync helpers
+paper/                figure and table generators
+runtime/              released artifacts
+  cases/              forecast cycle tables per split
+  features/           environmental and satellite diagnostics
+  guidance/           merged guidance per cycle
+  models/             all statistical anchors: skill and bias profiles,
+                      shrinkages, Platt scalings, gates, post-processors
+  forecasts/          every policy's forecasts (test and calibration)
+  transcripts/        full office deliberations for every LLM run
+  results/            frozen analysis manifest, metrics, significance,
+                      equivalence, headroom and RI verification tables
+```
+
+## Replaying the analysis
+
+All means, tests and confidence intervals in the paper are computed on the
+frozen manifest in `runtime/results/test_manifest.json`, which lists the exact
+case ids per lead time with hashes. Nothing is transcribed by hand.
+
+```bash
 export STORMDESK_WORK=$PWD/runtime
+
+# verification on the frozen manifest
 python scripts/07_evaluate.py --split test --case-list runtime/results/test_manifest.json
-python paper/figures/make_figs_v2.py      # Figures 3-8 (reads results CSVs)
-python paper/make_supp_tables.py          # supplementary tables
+
+# paper figures and supplementary tables
+python paper/figures/make_figs_v2.py
+python paper/make_supp_tables.py
 ```
 
-Running the office itself needs a vLLM server
-(`server/launch_vllm.sh`; Qwen2.5-7B/14B/72B-AWQ or Llama-3.1-8B) and
-`STORMDESK_LLM_URL`; temperature 0 is the recommended deterministic setting.
-Regenerating AIWP guidance from scratch needs ERA5 access and roughly 60
-GPU-hours; the released `runtime/` artifacts let you skip every GPU stage and
-replay the analysis directly.
+The released forecasts and transcripts let you skip every GPU stage. Scripts
+08–32 reproduce the individual analyses: behavior statistics, RI classifiers,
+the learned gate and stack, audit-stage replay, equivalence tests, regime
+statics, headroom utilization, and the Llama recalibration.
+
+## Running the office yourself
+
+The full pipeline, from raw data to forecasts:
+
+| Stage | Script | Needs |
+|---|---|---|
+| Case tables per split | `00_build_cases.py` | IBTrACS |
+| Diagnostics | `01_extract_features.py` | ERA5, GridSat-B1 crops |
+| AIWP guidance | `02_run_aiwp.py` | Pangu/FengWu weights, ~60 GPU h |
+| DL and statistical members | `03`–`05b` | CPU/single GPU |
+| The office | `06_run_agent.py` | a vLLM server |
+| Verification | `07_evaluate.py` | CPU |
+
+Start the LLM backend with `server/launch_vllm.sh` (Qwen2.5-7B/14B/72B-AWQ or
+Llama-3.1-8B) and point `STORMDESK_LLM_URL` at it. Temperature 0 is the
+recommended setting for exact replication; run-to-run variance at 0.3 is
+quantified in the supplementary material. If you switch model families, refit
+the calibration anchors on that family's own calibration run first; the paper
+shows that transferred anchors are what break, not the model family.
+
+## Case study
+
+Super Typhoon Noru gained 87 kt in 24 hours while every guidance member and the
+static prior forecast slow strengthening. The office flagged the risk in both
+of its channels, and the transcript records why:
+
+![Noru case study](assets/noru.png)
+
+The full deliberation for this cycle, and for every other cycle, is in
+`runtime/transcripts/`.
 
 ## Data sources
 
-IBTrACS v04r00 (NOAA), ERA5 (ECMWF/Copernicus), GridSat-B1 (NOAA), and the
-released Pangu-Weather, FengWu, Qwen2.5, and Llama-3.1 checkpoints. Raw
-reanalysis and satellite archives are not redistributed here; the derived
-briefing inputs in `runtime/` are.
+IBTrACS v04r00 (NOAA), ERA5 (Copernicus/ECMWF), GridSat-B1 (NOAA), and the
+public Pangu-Weather, FengWu, Qwen2.5 and Llama-3.1 checkpoints. Raw reanalysis
+and satellite archives are not redistributed here; the derived per-cycle inputs
+in `runtime/` are.
 
-## License
-
-MIT (see `LICENSE`).
+The accompanying paper is under double-blind review. A preprint link will be
+added here after the decision.
