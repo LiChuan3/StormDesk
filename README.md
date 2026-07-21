@@ -4,12 +4,14 @@ StormDesk is a virtual tropical cyclone forecast office run by LLM agents, built
 to answer one question under controlled conditions:
 
 > Given the same evidence and the same bounded action space, can a zero-shot LLM
-> combine forecast guidance as well as a learned decision policy?
+> use case-specific information as effectively as a learned decision policy?
 
 Deterministic tools compute a briefing for every forecast cycle. Every policy,
 LLM or not, reads that same briefing and acts through the same bounded contract.
-A ladder of static, regime-conditioned and supervised reference policies then
-pins down what kind of skill each gain actually represents.
+A ladder of static, regime-conditioned, and supervised reference policies then
+identifies what kind of skill each gain represents, and a single statistic,
+headroom utilization, measures the share of the supervised gate's proven
+improvement that a policy realizes.
 
 ![Overview: the controlled question](assets/overview.png)
 
@@ -26,17 +28,19 @@ the agents only act inside the contract.
 ## Findings
 
 Evaluated on 1,433 forecast cycles over 180 storms from the 2021–2022 seasons,
-against 35 policies on one frozen homogeneous sample:
+with 35 policies verified on one frozen homogeneous sample:
 
 **Safety comes from the contract.** Asked for coordinates directly, the LLM
 drops hemisphere signs and 43–45% of its positions land more than 2,000 km off
 track. Inside the contract, the office is statistically equivalent to the
-static prior at every lead time.
+static prior on track at every lead time and on intensity at the two shorter
+leads.
 
 **Case adaptation comes from supervision.** A gradient-boosted gate proves that
 real headroom exists inside the same bounds. The office realizes essentially
 none of it, and when handed the gate's own features with a prompt that licenses
-decisive reweighting, it becomes clearly worse than its conservative self.
+decisive reweighting, it becomes markedly worse than the conservatively
+prompted office.
 
 ![Headroom utilization](assets/headroom.png)
 
@@ -47,15 +51,21 @@ one. The paper reports this as a controlled negative result.
 
 ## What is in this repository
 
-Everything needed to replay the analysis, without any GPU:
+The paper releases four things: the briefings, the reference policies, the
+analysis manifest, and the code. All four are here, and replaying the analysis
+needs no GPU.
 
 ```
 stormdesk/            the package
   agents/prompts.py   the exact office prompts, verbatim
-  agents/office.py    the five-call office and every policy variant
+  agents/office.py    briefing construction, the five-call office,
+                      and every policy variant
+  baselines.py        statistical and consensus reference policies
+  combiner.py         the supervised gate, stack, and static ladders
   evaluate.py         homogeneous verification, bootstrap, TOST, Holm
 scripts/              numbered pipeline stages 00–32
-server/               vLLM launch and cluster sync helpers
+server/               vLLM launch, cluster sync, and the exact analysis
+                      pipeline behind the paper numbers
 paper/                figure and table generators
 runtime/              released artifacts
   cases/              forecast cycle tables per split
@@ -64,22 +74,46 @@ runtime/              released artifacts
   models/             all statistical anchors: skill and bias profiles,
                       shrinkages, Platt scalings, gates, post-processors
   forecasts/          every policy's forecasts (test and calibration)
-  transcripts/        full office deliberations for every LLM run
+  transcripts/        full office deliberations, including the verbatim
+                      briefing every policy read
   results/            frozen analysis manifest, metrics, significance,
                       equivalence, headroom and RI verification tables
 ```
 
+Where each released item lives:
+
+- **Briefings.** Every file in `runtime/transcripts/` records the exact
+  briefing text for each cycle, and `build_briefing` in
+  `stormdesk/agents/office.py` reconstructs it deterministically from the
+  released inputs in `runtime/`.
+- **Reference policies.** Implementations in `stormdesk/baselines.py`,
+  `stormdesk/combiner.py`, and `scripts/11`–`32`; their forecasts are in
+  `runtime/forecasts/`.
+- **Manifest.** `runtime/results/test_manifest.json` lists the exact case ids
+  per lead time with hashes. Every mean, test, and confidence interval in the
+  paper is computed on it; nothing is transcribed by hand.
+- **Code.** The office, the contract, and the verification stack, with the
+  prompts verbatim in `stormdesk/agents/prompts.py`.
+
 ## Replaying the analysis
 
-All means, tests and confidence intervals in the paper are computed on the
-frozen manifest in `runtime/results/test_manifest.json`, which lists the exact
-case ids per lead time with hashes. Nothing is transcribed by hand.
+`server/run_manifest_pipeline.sh` is the exact pipeline that produced the
+manifest and every manifest-locked number in the paper:
 
 ```bash
 export STORMDESK_WORK=$PWD/runtime
+export PY=python
+bash server/run_manifest_pipeline.sh
+```
 
-# verification on the frozen manifest
-python scripts/07_evaluate.py --split test --case-list runtime/results/test_manifest.json
+Individual pieces, once the manifest exists:
+
+```bash
+# homogeneous verification over the released policies
+python scripts/07_evaluate.py --split test
+
+# headroom utilization on the frozen manifest
+python scripts/30_headroom.py --case-list runtime/results/test_manifest.json
 
 # paper figures and supplementary tables
 python paper/figures/make_figs_v2.py

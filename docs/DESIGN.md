@@ -1,5 +1,10 @@
 # StormDesk — A Virtual Forecast Office of LLM Agents for Tropical Cyclone Prediction
 
+> This is the original design note, written before the experiments were run.
+> It is kept unchanged for provenance. Where it differs from the paper (for
+> example, role counts or preliminary literature numbers), the paper and the
+> top-level README are authoritative.
+
 ## 1. Motivation chain (from literature)
 
 1. Multi-model consensus reduces TC track error by up to 11% at long leads —
