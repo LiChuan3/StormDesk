@@ -56,28 +56,23 @@ analysis manifest, and the code. All four are here, and replaying the analysis
 needs no GPU.
 
 ```
-stormdesk/            the package
-  agents/prompts.py   the exact office prompts, verbatim
-  agents/office.py    briefing construction, the five-call office,
-                      and every policy variant
-  baselines.py        statistical and consensus reference policies
-  combiner.py         the supervised gate, stack, and static ladders
-  evaluate.py         homogeneous verification, bootstrap, TOST, Holm
-scripts/              numbered pipeline stages 00–32
-server/               vLLM launch, cluster sync, and the exact analysis
-                      pipeline behind the paper numbers
-paper/                figure and table generators
-runtime/              released artifacts
-  cases/              forecast cycle tables per split
-  features/           environmental and satellite diagnostics
-  guidance/           merged guidance per cycle
-  models/             all statistical anchors: skill and bias profiles,
-                      shrinkages, Platt scalings, gates, post-processors
-  forecasts/          every policy's forecasts (test and calibration)
-  transcripts/        full office deliberations, including the verbatim
-                      briefing every policy read
-  results/            frozen analysis manifest, metrics, significance,
-                      equivalence, headroom and RI verification tables
+stormdesk/             the Python package
+  agents/prompts.py    the exact office prompts, verbatim
+  agents/office.py     briefing construction and the five-call office
+  baselines.py         statistical and consensus reference policies
+  combiner.py          the supervised gate, stack, and static ladders
+  evaluate.py          homogeneous verification, bootstrap, TOST, Holm
+scripts/               numbered pipeline stages 00-32
+server/                vLLM launch, cluster sync, analysis pipeline
+paper/                 figure and table generators
+runtime/               released artifacts
+  cases/               forecast cycle tables per split
+  features/            environmental and satellite diagnostics
+  guidance/            merged guidance per cycle
+  models/              statistical anchors, from skill priors to gates
+  forecasts/           forecasts from every policy, test and calibration
+  transcripts/         office deliberations with each cycle's briefing
+  results/             frozen manifest, metrics, tests, headroom, RI
 ```
 
 Where each released item lives:
