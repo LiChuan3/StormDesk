@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # Launch the vLLM OpenAI-compatible server for StormDesk agents.
-# Usage: GPU=1 PORT=8500 MODEL=/data/yuxiaoning/models/Qwen2.5-14B-Instruct \
+# Usage: GPU=1 PORT=8500 MODEL=/data/USER/models/Qwen2.5-14B-Instruct \
 #        NAME=qwen2.5-14b bash server/launch_vllm.sh
 set -e
-ENV_DIR=${ENV_DIR:-/data_small/user_envs/yuxiaoning/stormdesk-vllm}
+ENV_DIR=${ENV_DIR:-/data_small/user_envs/USER/stormdesk-vllm}
 GPU=${GPU:-1}
 PORT=${PORT:-8500}
-MODEL=${MODEL:-/data/yuxiaoning/models/Qwen2.5-14B-Instruct}
+MODEL=${MODEL:-/data/USER/models/Qwen2.5-14B-Instruct}
 NAME=${NAME:-qwen2.5-14b}
 UTIL=${UTIL:-0.85}
 MAXLEN=${MAXLEN:-8192}

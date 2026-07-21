@@ -7,8 +7,8 @@ NODES=("$@")
 if [ ${#NODES[@]} -eq 0 ]; then NODES=(pro6000-1 pro6000-3); fi
 for n in "${NODES[@]}"; do
   case $n in
-    pro6000-1|pro6000-2) DEST=/data/yuxiaoning/projects/stormdesk ;;
-    pro6000-3|pro6000-4) DEST=/data_hdd/yuxiaoning/projects/stormdesk ;;
+    pro6000-1|pro6000-2) DEST=/data/USER/projects/stormdesk ;;
+    pro6000-3|pro6000-4) DEST=/data_hdd/USER/projects/stormdesk ;;
     *) echo "unknown node $n"; exit 1 ;;
   esac
   echo "sync -> $n:$DEST"

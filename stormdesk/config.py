@@ -127,16 +127,16 @@ INPUT_STEPS = 4                          # 24 h of 6-h history fed to DL models
 # ---------------------------------------------------------------------------
 @dataclass
 class Paths:
-    tc_era5: str = "/data/yuxiaoning/data/TC_ERA5"
-    ibtracs_csv: str = "/data/yuxiaoning/data/TC_ERA5/ibtracs.ALL.list.v04r00.csv"
-    era5_cache: str = "/data/yuxiaoning/data/era5_npy_cache"
-    fengwu_cache: str = "/data/yuxiaoning/data/fengwu_cache"
-    fengwu_onnx: str = "/data/yuxiaoning/projects/fengwu/inference/fengwu_v2.onnx"
-    fengwu_mean: str = "/data/yuxiaoning/projects/fengwu/inference/data_mean.npy"
-    fengwu_std: str = "/data/yuxiaoning/projects/fengwu/inference/data_std.npy"
-    pangu_dir: str = "/data/yuxiaoning/projects/Pangu-Weather"
+    tc_era5: str = "/data/USER/data/TC_ERA5"
+    ibtracs_csv: str = "/data/USER/data/TC_ERA5/ibtracs.ALL.list.v04r00.csv"
+    era5_cache: str = "/data/USER/data/era5_npy_cache"
+    fengwu_cache: str = "/data/USER/data/fengwu_cache"
+    fengwu_onnx: str = "/data/USER/projects/fengwu/inference/fengwu_v2.onnx"
+    fengwu_mean: str = "/data/USER/projects/fengwu/inference/data_mean.npy"
+    fengwu_std: str = "/data/USER/projects/fengwu/inference/data_std.npy"
+    pangu_dir: str = "/data/USER/projects/Pangu-Weather"
     fuxi_dir: str = "/data/webset/models/fuxi"
-    work: str = "/data/yuxiaoning/projects/stormdesk_runtime"  # outputs (not in git)
+    work: str = "/data/USER/projects/stormdesk_runtime"  # outputs (not in git)
     llm_base_url: str = os.environ.get("STORMDESK_LLM_URL", "http://192.168.100.5:8500/v1")
     llm_model: str = os.environ.get("STORMDESK_LLM_MODEL", "qwen2.5-14b")
 
@@ -150,10 +150,10 @@ def get_paths() -> Paths:
     host = socket.gethostname()
     p = Paths()
     if host in ("node3", "node4"):
-        base = "/data_ssd/yuxiaoning/datasets/TC_ERA5"
+        base = "/data_ssd/USER/datasets/TC_ERA5"
         p.tc_era5 = base
         p.ibtracs_csv = os.path.join(base, "ibtracs.ALL.list.v04r00.csv")
-        p.work = "/data_hdd/yuxiaoning/projects/stormdesk_runtime"
+        p.work = "/data_hdd/USER/projects/stormdesk_runtime"
     override = os.environ.get("STORMDESK_WORK")
     if override:
         p.work = override

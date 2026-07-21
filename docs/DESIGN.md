@@ -76,15 +76,15 @@ Tools (ChemCrow-style toolbox):
 
 | Asset | Location | Use |
 |---|---|---|
-| TC_ERA5 (MSETCD) 1980–2022, 421 GB | node1/2 `/data/yuxiaoning/data/TC_ERA5` | crops: diagnostics, analog features |
+| TC_ERA5 (MSETCD) 1980–2022, 421 GB | node1/2 `/data/USER/data/TC_ERA5` | crops: diagnostics, analog features |
 | `fengwu_cache` 26 TB, (4,69,721,1440)/init = +6/12/18/24 h | node1/2 | free FengWu guidance ≤24 h; states at +18/+24 seed ONNX continuation to 72 h |
 | `era5_npy_cache` 4.8 TB (69,721,1440)/TC-time | node1/2 | AIWP initial conditions |
 | Pangu onnx (1/3/6/24 h), FengWu v2 onnx, FuXi short onnx | node1/2 projects | AIWP members |
 | IBTrACS v04r00 csv | all nodes | truth + CLIPER + analogs |
 | GridSat-B1 crops in TC_ERA5 | node1/2 | satellite tool |
-| env `llm-tc` (onnxruntime-gpu 1.23.2, torch cu128) | node1/2 `/data_small/user_envs/yuxiaoning/llm-tc` | inference + pipeline |
+| env `llm-tc` (onnxruntime-gpu 1.23.2, torch cu128) | node1/2 `/data_small/user_envs/USER/llm-tc` | inference + pipeline |
 | vLLM + Qwen (to deploy) | node2 GPU1 (94 GB free) / node3 GPU5 | agent backbone |
-| node3/4 | `/data_hdd/yuxiaoning/projects` | DL retrain, LLM ablations |
+| node3/4 | `/data_hdd/USER/projects` | DL retrain, LLM ablations |
 
 ## 5. Paper skeleton (Virtual Lab × ChemCrow)
 

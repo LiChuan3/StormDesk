@@ -1,4 +1,4 @@
-/data_small/user_envs/yuxiaoning/llm-tc/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py:3045: RuntimeWarning: invalid value encountered in divide
+/data_small/user_envs/USER/llm-tc/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py:3045: RuntimeWarning: invalid value encountered in divide
   c /= stddev[:, None]
 methods: {'persistence': 1433, 'cliper': 1425, 'gru': 1425, 'transformer': 1425, 'cons_equal': 1431, 'cons_weighted': 1431, 'cons_bc': 1431, 'cons_aiwp': 1319, 'hybrid_static': 1319, 'hybrid_rules': 1319, 'agent_full_qwen7b': 1428, 'agent_full_qwen14b': 1429, 'agent_full_qwen72b': 1431, 'agent_single_qwen14b': 1431, 'agent_no_analogs_qwen14b': 1431, 'agent_no_auditor_qwen14b': 1431, 'agent_no_auditor_qwen14b_detaudit': 1431, 'agent_no_diagnostics_qwen14b': 1427, 'pangu': 1319, 'fengwu': 1319}
 
@@ -237,4 +237,4 @@ agent_no_auditor_qwen14b_detaudit    72  919       119    208.76    177.19    24
                             pangu    72  919       119    219.95    180.88    266.61        24.50    20.75    28.26    6.18     -21.13      31.93      0.60   6.62      3.56      9.60     0.00
                            fengwu    72  919       119    254.52    201.84    318.79        29.10    25.15    33.14   40.75      14.64      72.73      0.00  11.22      7.91     14.45     0.00
 
-wrote /data/yuxiaoning/projects/stormdesk_runtime/results/test_metrics.csv
+wrote /data/USER/projects/stormdesk_runtime/results/test_metrics.csv

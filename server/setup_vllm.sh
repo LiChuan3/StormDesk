@@ -2,8 +2,8 @@
 # One-time setup of the vLLM env + Qwen weights on a GPU node (China mirrors).
 # Usage: bash server/setup_vllm.sh [env_dir] [model_dir]
 set -e
-ENV_DIR=${ENV_DIR:-${1:-/data_small/user_envs/yuxiaoning/stormdesk-vllm}}
-MODEL_DIR=${MODEL_DIR:-${2:-/data/yuxiaoning/models}}
+ENV_DIR=${ENV_DIR:-${1:-/data_small/user_envs/USER/stormdesk-vllm}}
+MODEL_DIR=${MODEL_DIR:-${2:-/data/USER/models}}
 PIP_INDEX=https://pypi.tuna.tsinghua.edu.cn/simple
 export HF_ENDPOINT=https://hf-mirror.com
 # stale proxy settings on the nodes break pip/hf downloads (both env vars and
@@ -11,7 +11,7 @@ export HF_ENDPOINT=https://hf-mirror.com
 unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY all_proxy ALL_PROXY
 export PIP_CONFIG_FILE=/dev/null
 
-PYBIN=${PYBIN:-/data_small/user_envs/yuxiaoning/llm-tc/bin/python}
+PYBIN=${PYBIN:-/data_small/user_envs/USER/llm-tc/bin/python}
 if [ ! -f "$ENV_DIR/bin/activate" ]; then
   "$PYBIN" -m venv "$ENV_DIR"
 fi

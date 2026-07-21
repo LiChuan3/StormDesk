@@ -1,4 +1,4 @@
-/data_small/user_envs/yuxiaoning/llm-tc/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py:3045: RuntimeWarning: invalid value encountered in divide
+/data_small/user_envs/USER/llm-tc/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py:3045: RuntimeWarning: invalid value encountered in divide
   c /= stddev[:, None]
 methods: {'cons_bc': 1431, 'cons_aiwp': 1319, 'hybrid_static': 1319, 'static_convex': 1431, 'gbt_static': 1431, 'gbt_case': 1431, 'gbt_shuffled': 1431, 'learned_gbt2': 1403, 'learned_gbt_contract': 1403, 'analog_median': 1318, 'analog_linear': 1318, 'agent_full_qwen14b': 1429, 'agent_mini_qwen14b': 1430}
 
@@ -170,4 +170,4 @@ learned_gbt_contract    72  928       123    186.79    163.73    215.27        1
   agent_full_qwen14b    72  928       123    214.89    181.53    256.57        18.50    16.70    20.35   -2.92     -13.16       5.74      0.57   0.60     -0.02      1.25     0.06
   agent_mini_qwen14b    72  928       123    226.67    192.89    267.90        18.55    16.74    20.37    8.86      -0.74      17.45      0.07   0.65      0.13      1.23     0.02
 
-wrote /data/yuxiaoning/projects/stormdesk_runtime/results/v6_metrics.csv
+wrote /data/USER/projects/stormdesk_runtime/results/v6_metrics.csv

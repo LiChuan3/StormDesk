@@ -1,11 +1,11 @@
 fitting static convex weights ...
   weights: {24: {'pangu': 0.44, 'fengwu': 0.48, 'gru': 0.08, 'transformer': 0.0, 'cliper': 0.0}, 48: {'pangu': 0.44, 'fengwu': 0.52, 'gru': 0.04, 'transformer': 0.0, 'cliper': 0.01}, 72: {'pangu': 0.7, 'fengwu': 0.26, 'gru': 0.04, 'transformer': 0.0, 'cliper': 0.0}}
-static_convex: 1431 -> /data/yuxiaoning/projects/stormdesk_runtime/forecasts/test_static_convex.jsonl
+static_convex: 1431 -> /data/USER/projects/stormdesk_runtime/forecasts/test_static_convex.jsonl
 fitting GBT track gates ...
-gbt_case: 1431 -> /data/yuxiaoning/projects/stormdesk_runtime/forecasts/test_gbt_case.jsonl
-gbt_static: 1431 -> /data/yuxiaoning/projects/stormdesk_runtime/forecasts/test_gbt_static.jsonl
-gbt_shuffled: 1431 -> /data/yuxiaoning/projects/stormdesk_runtime/forecasts/test_gbt_shuffled.jsonl
-gbt_case_withaiwp: 1431 -> /data/yuxiaoning/projects/stormdesk_runtime/forecasts/test_gbt_case_withaiwp.jsonl
+gbt_case: 1431 -> /data/USER/projects/stormdesk_runtime/forecasts/test_gbt_case.jsonl
+gbt_static: 1431 -> /data/USER/projects/stormdesk_runtime/forecasts/test_gbt_static.jsonl
+gbt_shuffled: 1431 -> /data/USER/projects/stormdesk_runtime/forecasts/test_gbt_shuffled.jsonl
+gbt_case_withaiwp: 1431 -> /data/USER/projects/stormdesk_runtime/forecasts/test_gbt_case_withaiwp.jsonl
 
 TRACK km: {
  "static_convex": {
@@ -44,8 +44,8 @@ gbt_static->case: {'24': 8.49, '48': 11.29, '72': 37.8}
 
 fitting intensity residual GBT ...
   GBT intensity shrinkage (a,b): {'24': (1.5431279705455696, -0.043442689634138304), '48': (1.6407360648649183, 0.23968397727649032), '72': (1.7531331300961097, 0.31190484893943565)}
-learned_gbt2: 1403 -> /data/yuxiaoning/projects/stormdesk_runtime/forecasts/test_learned_gbt2.jsonl
-learned_gbt_contract: 1403 -> /data/yuxiaoning/projects/stormdesk_runtime/forecasts/test_learned_gbt_contract.jsonl
+learned_gbt2: 1403 -> /data/USER/projects/stormdesk_runtime/forecasts/test_learned_gbt2.jsonl
+learned_gbt_contract: 1403 -> /data/USER/projects/stormdesk_runtime/forecasts/test_learned_gbt_contract.jsonl
   fraction of GBT intensity residuals exceeding +-25 kt: {'24': 0.009, '48': 0.015, '72': 0.012}
 
 wrote decomp summary

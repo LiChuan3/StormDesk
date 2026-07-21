@@ -8,7 +8,7 @@ import sys
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, "/data/yuxiaoning/projects/stormdesk")
+sys.path.insert(0, "/data/USER/projects/stormdesk")
 from stormdesk.config import work_dir
 from stormdesk.evaluate import case_id, load_forecasts, evaluate_methods
 

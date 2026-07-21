@@ -1,4 +1,4 @@
-/data/yuxiaoning/projects/stormdesk/scripts/12_ri_baselines.py:122: RuntimeWarning: overflow encountered in exp
+/data/USER/projects/stormdesk/scripts/12_ri_baselines.py:122: RuntimeWarning: overflow encountered in exp
   q = 1 / (1 + np.exp(-z))
 building calib matrix ...
 building test matrix ...
@@ -22,4 +22,4 @@ homogeneous RI sample: n=1287 events=87
 agent_no_diagnostics_qwen14b 1287      87      0.140    62      25           323 0.712644 0.838961 0.151220 0.0683 -0.069    -0.084    0.776   0.153    0.2417        0.880  -1.018000e+00   0.606   0.808   0.109   0.198  -0.201   0.033            0.186         -0.037          0.004           True            0.040        0.156         0.26   0.789   0.884
     agent_no_analogs_qwen14b 1287      87      0.140    76      11           601 0.873563 0.887740 0.110465 0.0927 -0.449    -0.470    0.719   0.119    0.3168        0.874  -1.555000e+00   0.783   0.947   0.083   0.140  -0.681  -0.274            0.000         -0.081         -0.035          False            0.000        0.113         0.21   0.857   0.916
                         clim 1287      87      0.500     0      87             0 0.000000      NaN 0.000000 0.0639  0.000    -0.014    0.500   0.068    0.2530        1.149  -6.700000e-02   0.000   0.000   0.000   0.000   0.000   0.000            0.000         -0.208         -0.130          False            0.852        0.068         0.01     NaN     NaN
-wrote /data/yuxiaoning/projects/stormdesk_runtime/results/test_ri_baselines.csv and _ri_curves.json
+wrote /data/USER/projects/stormdesk_runtime/results/test_ri_baselines.csv and _ri_curves.json
